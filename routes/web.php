@@ -30,8 +30,8 @@ Route::middleware('auth')->group(function () {
 //Route::group(function(){
     //Route::controller(ObservatoryController::class)->group(function(){
         Route::get('/home',function(){
-            return view('observatories.home');
-        });
+            return view('observatories/home');
+        })->name('home');
     
     //});
     
