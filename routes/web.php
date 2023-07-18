@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -27,5 +26,15 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+//Route::group(function(){
+    //Route::controller(ObservatoryController::class)->group(function(){
+        Route::get('/home',function(){
+            return view('observatories.home');
+        });
+    
+    //});
+    
+//});
 
 require __DIR__.'/auth.php';
