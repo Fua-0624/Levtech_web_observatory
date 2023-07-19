@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ObservatoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,13 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//Route::group(function(){
-    //Route::controller(ObservatoryController::class)->group(function(){
-        Route::get('/home',function(){
-            return view('observatories/home');
-        })->name('home');
-    
-    //});
+Route::get('/home',[ObservatoryController::class,"home"])->name('home');
     
 //});
 
