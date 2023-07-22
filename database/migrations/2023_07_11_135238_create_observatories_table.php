@@ -17,13 +17,14 @@ return new class extends Migration
             $table->id();
             $table->string('prefecture');
             $table->string('observatory');
-            $table->boolean('hotel');
-            $table->boolean('planetarium');
+            $table->string('hotel');
+            $table->string('planetarium');
             $table->string('HP_link');
             $table->string('address_number');
             $table->string('address');
             $table->string('google_url');
-            $table->integer('size');
+            $table->string('Coordinate')->nullable();
+            $table->string('JapanMap');
             $table->foreignId('region_id');
             $table->timestamps();
         });

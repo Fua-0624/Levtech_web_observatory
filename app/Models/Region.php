@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Region extends Model
 {
     use HasFactory;
+    
+    public function observatories(){
+        return $this -> belongsTo(Observatory::class);
+    }
+    
+    public function getByRegion(){
+        return $this->observatories()->with('region');
+    }
 }

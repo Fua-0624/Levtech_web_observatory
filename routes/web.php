@@ -29,7 +29,5 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/home',[ObservatoryController::class,"home"])->name('home');
-    
-//});
-
+//Route::get('/regions/{region}',[RegionController::class,'region']->name('region'));
 require __DIR__.'/auth.php';
