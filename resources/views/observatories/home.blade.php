@@ -22,7 +22,7 @@
              <div>
                 <img src="{{ asset('/css/image/Japan.PNG') }}" usemap="#Japan" alt="日本地図" class="map"/>
                 <map name="Japan">
-                    <area shape="circle" coords="1356,312,13" href="https://www.nayoro-star.jp/kitasubaru/" class="observatory"/>
+                    <area shape="circle" coords="1356,312,13" href="https://www.nayoro-star.jp/kitasubaru/" class="observatory"　data-tooltip="吹き出しテスト" onmouseover="showTooltip(1)"/>
                     <area shape="circle" coords="1449,371,12" href="https://www.rikubetsu.jp/tenmon/"/>
                     <area shape="circle" coords="1218,999,12" href="https://www.sendai-astro.jp/"/>
                     <area shape="circle" coords="1049,1206,13" href="https://www.astron.pref.gunma.jp/"/>
@@ -38,12 +38,40 @@
                     <area shape="circle" coords="242,1573,9" href="https://www.hoshinofurusato.jp/constellation/"/>
                     <area shape="circle" coords="1187,1900,11" href="https://murikabushi.jp/"/>
                 </map>
+                <div class="tooltip" id="tooltip">
+                    <h2 id="title"></h2>
+                    <p>宿泊施設:<span id="hotel"></span></p>
+                </div>
 	        </div>
             
         <!--JavaScript-->
             <script>
                 $('img[usemap]').rwdImageMaps();
+                function showTooltip(area) {
+                    console.log(area);
+                    const tooltip = document.getElementById('tooltip');
+                    const title = document.getElementById('title');
+                    const hotel = document.getElementById('hotel');
+                    if (area === 1 ){
+                        title.textContent = "なよろ市立天文台きたすばる";
+                        hotel.textContent = "×";
+                    }
+                    tooltip.style.display = 'block';
+                    tooltip.style.left = event.pageX + 'px';
+                    tooltip.style.top = event.pageY + 'px';
+                }
+
+                function hideTooltip() {
+                    const tooltip = document.getElementById('tooltip');
+                    tooltip.style.display = 'none';
+                }
+
+                const observatories = document.querySelectorAll('area');
+                observatories.forEach(area => {
+                area.addEventListener('mouseout', hideTooltip);
+                });
             </script>
+            
          </body>
     </x-app-layout>
 

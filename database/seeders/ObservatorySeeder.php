@@ -25,7 +25,7 @@ class ObservatorySeeder extends Seeder
              'address_number' => "096-0066",
              'address' => "名寄市日進147-157-1",
              'google_url' => "https://goo.gl/maps/tZKkXa67M7xMtZie8",
-             'Coordinate' =>　"1356,312,13",
+             'Coordinate' => "1356,312,13",
              'JapanMap' => "○",
              'region_id' => 2,
              'created_at' => new DateTime(),
@@ -54,7 +54,7 @@ class ObservatorySeeder extends Seeder
              'address' => "旭川市6条通9丁目",
              'google_url' => "https://goo.gl/maps/zVcg7PY6rzcStygg7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 2,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -68,7 +68,7 @@ class ObservatorySeeder extends Seeder
              'address' => "足寄郡陸別町宇遠別",
              'google_url' => "https://goo.gl/maps/7WxkUKv9kS3dUhT76",
              'Coordinate' => "1449,371,12",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 2,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -82,7 +82,7 @@ class ObservatorySeeder extends Seeder
              'address' => "札幌市厚別区厚別中央1条5丁目2-20",
              'google_url' => "https://goo.gl/maps/Txpm4cqV9FAPcKbC9",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 2,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -96,7 +96,7 @@ class ObservatorySeeder extends Seeder
              'address' => "仙台市青葉区錦ヶ丘9丁目29-32",
              'google_url' => "https://goo.gl/maps/HhHCL1UvRs11uU7k9",
              'Coordinate' => "1218,999,12",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 3,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -108,9 +108,9 @@ class ObservatorySeeder extends Seeder
              'HP_link' => "https://www.city.tamura.lg.jp/soshiki/20/",
              'address_number' => "963-3602",
              'address' => "田村市滝根町神俣字糠塚60番地1",
-             'google_url' => "https://goo.gl/maps/HKd53hVFwmcrTe3n6"
+             'google_url' => "https://goo.gl/maps/HKd53hVFwmcrTe3n6",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 3,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -124,7 +124,7 @@ class ObservatorySeeder extends Seeder
              'address' => "宇都宮市西川田町567",
              'google_url' => "https://goo.gl/maps/HRfakBgUcTGbCyPA6",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 4,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -138,7 +138,7 @@ class ObservatorySeeder extends Seeder
              'address' => "吾妻郡高山村中山6860-86",
              'google_url' => "https://goo.gl/maps/ojGzXyYC58W6BuPt8",
              'Coordinate' => "1049,1206,13",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 4,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -152,7 +152,7 @@ class ObservatorySeeder extends Seeder
              'address' => "比企郡ときがわ町大字大野1853",
              'google_url' => "https://goo.gl/maps/BySDWLwBCGoqNaJp7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 4,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -166,7 +166,7 @@ class ObservatorySeeder extends Seeder
              'address' => "川口市上青木3-12-183",
              'google_url' => "https://goo.gl/maps/iVS7UMFhrUpqwHXAA",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 4,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -180,7 +180,7 @@ class ObservatorySeeder extends Seeder
              'address' => "三鷹市大沢2-21-1",
              'google_url' => "https://goo.gl/maps/2PCyff7B17ias17e7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 4,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -194,7 +194,7 @@ class ObservatorySeeder extends Seeder
              'address' => "新潟市中央区女池南3丁目1番1号",
              'google_url' => "https://goo.gl/maps/EopLqTXeccHFLEPB7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -208,7 +208,7 @@ class ObservatorySeeder extends Seeder
              'address' => "上越市清里区青柳3436-2",
              'google_url' => "https://goo.gl/maps/wGsBFCVXpBset8Ly7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -222,7 +222,7 @@ class ObservatorySeeder extends Seeder
              'address' => "中新川郡立山町芦峅寺字前谷1番地",
              'google_url' => "https://goo.gl/maps/gSL7xF9aJWppDxx48",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -236,7 +236,7 @@ class ObservatorySeeder extends Seeder
              'address' => "鳳珠郡能登町上町ロ1-1",
              'google_url' => "https://goo.gl/maps/N1QV2K6DWowm3gaf7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -250,7 +250,7 @@ class ObservatorySeeder extends Seeder
              'address' => "大野市南六呂師169-11-2",
              'google_url' => "https://goo.gl/maps/rHxaGZSayn8s6kLM9",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -264,7 +264,7 @@ class ObservatorySeeder extends Seeder
              'address' => "佐久市臼田3113-1",
              'google_url' => "https://goo.gl/maps/7FogDdDMiDcA9rdX7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -278,7 +278,7 @@ class ObservatorySeeder extends Seeder
              'address' => "佐久市上小田切大曲1831-6",
              'google_url' => "https://goo.gl/maps/iugZ2R2rVeM242VN6",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -292,7 +292,7 @@ class ObservatorySeeder extends Seeder
              'address' => "長野県木曽郡王滝村 3159番地25",
              'google_url' => "https://goo.gl/maps/68GRXXEzQszy3PGA9",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -306,7 +306,7 @@ class ObservatorySeeder extends Seeder
              'address' => "長野県木曽郡木曽町三岳10762-30",
              'google_url' => "https://goo.gl/maps/Frfy7pZWEsdKYYJYA",
              'Coordinate' => "939,1303,12",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -320,7 +320,7 @@ class ObservatorySeeder extends Seeder
              'address' => "岐阜県高山市上宝町蔵柱",
              'google_url' => "https://goo.gl/maps/DLjTqX19p6A6C9Rr6",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -334,7 +334,7 @@ class ObservatorySeeder extends Seeder
              'address' => "岐阜市本荘3456-41",
              'google_url' => "https://goo.gl/maps/3Tvxd8kLDKk1ZVMA6",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -348,7 +348,7 @@ class ObservatorySeeder extends Seeder
              'address' => "安八郡安八町氷取30番地",
              'google_url' => "https://goo.gl/maps/TP25YkdYtaAqdH6Q8",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -362,7 +362,7 @@ class ObservatorySeeder extends Seeder
              'address' => "田方郡函南町桑原1308-222",
              'google_url' => "https://goo.gl/maps/hTtJ99xqZrsqTB1q9",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -376,7 +376,7 @@ class ObservatorySeeder extends Seeder
              'address' => "焼津市田尻2968-1",
              'google_url' => "https://goo.gl/maps/312GWjFc4bpMsMfA7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -390,7 +390,7 @@ class ObservatorySeeder extends Seeder
              'address' => "尾張旭市城山町4517－1",
              'google_url' => "https://goo.gl/maps/dCqXDokN7ceemxnu7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -404,7 +404,7 @@ class ObservatorySeeder extends Seeder
              'address' => "名古屋市中区栄二丁目17番1号",
              'google_url' => "https://goo.gl/maps/q92hMQLSHhJFLg7z5",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 5,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -418,7 +418,7 @@ class ObservatorySeeder extends Seeder
              'address' => "尾鷲市中村町10-41",
              'google_url' => "https://goo.gl/maps/hoj3U12eSFNz5j827",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -432,7 +432,7 @@ class ObservatorySeeder extends Seeder
              'address' => "犬上郡多賀町大字多賀283-1",
              'google_url' => "https://goo.gl/maps/bjg7BfyUNzWkQxML6",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -446,7 +446,7 @@ class ObservatorySeeder extends Seeder
              'address' => "綾部市里町久田21番地の8",
              'google_url' => "https://goo.gl/maps/6JpSSTD1gqNR83hH9",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -460,7 +460,7 @@ class ObservatorySeeder extends Seeder
              'address' => "京都市山科区北花山大峰町１７",
              'google_url' => "https://goo.gl/maps/3gag58G6UN3evQ8x7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -474,7 +474,7 @@ class ObservatorySeeder extends Seeder
              'address' => "船井郡京丹波町曽根崩下代110番地7",
              'google_url' => "https://goo.gl/maps/Ha6cdniskSavjvbX7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -488,7 +488,7 @@ class ObservatorySeeder extends Seeder
              'address' => "京都市北区上賀茂本山",
              'google_url' => "https://goo.gl/maps/kb2Yg7xdE8DwEkyi7",
              'Coordinate' => "734,1383,13",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -502,7 +502,7 @@ class ObservatorySeeder extends Seeder
              'address' => "大阪市北区中之島4-2-1",
              'google_url' => "https://goo.gl/maps/4g6KF4NHE8T5nyHH9",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -516,7 +516,7 @@ class ObservatorySeeder extends Seeder
              'address' => "堺市中区深井清水町1426",
              'google_url' => "https://goo.gl/maps/giRKdRQw4hBe7wVR7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -530,7 +530,7 @@ class ObservatorySeeder extends Seeder
              'address' => "貝塚市三ッ松216",
              'google_url' => "https://goo.gl/maps/iG3U5VXEHWpqNx7R8",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -544,7 +544,7 @@ class ObservatorySeeder extends Seeder
              'address' => "佐用郡佐用町西河内407-2",
              'google_url' => "https://goo.gl/maps/VxpdEBm3Ebw7qzhe7",
              'Coordinate' => "617,1388,15",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -558,7 +558,7 @@ class ObservatorySeeder extends Seeder
              'address' => "川辺郡猪名川町柏原字尾野ヶ嶽1-1",
              'google_url' => "https://goo.gl/maps/PdZGBz1u2sY95UFq5",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -572,7 +572,7 @@ class ObservatorySeeder extends Seeder
              'address' => "西脇市上比延町334-2",
              'google_url' => "https://goo.gl/maps/TFQ2F7gCLnvidA527",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -586,7 +586,7 @@ class ObservatorySeeder extends Seeder
              'address' => "姫路市青山1470-24",
              'google_url' => "https://goo.gl/maps/V2ysEPBG4Kwb93GM8",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -600,7 +600,7 @@ class ObservatorySeeder extends Seeder
              'address' => "海草郡紀美野町松ヶ峯180",
              'google_url' => "https://goo.gl/maps/3WYyWrpd63JogPb28",
              'Coordinate' => "707,1492,11",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -614,7 +614,7 @@ class ObservatorySeeder extends Seeder
              'address' => "日高郡日高川町和佐2107",
              'google_url' => "https://goo.gl/maps/fbxFDB7RfiKAugdn8",
              'Coordinate' => "695,1521,10",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 6,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -628,7 +628,7 @@ class ObservatorySeeder extends Seeder
              'address' => "鳥取市佐治町高山1071-1",
              'google_url' => "https://goo.gl/maps/ykKm7nVq21ywYRSv7",
              'Coordinate' => "587,1346,12",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 7,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -642,7 +642,7 @@ class ObservatorySeeder extends Seeder
              'address' => "大田市三瓶町多根1121-8",
              'google_url' => "https://goo.gl/maps/TR57A4j7ohimkuPJ7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 7,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -656,7 +656,7 @@ class ObservatorySeeder extends Seeder
              'address' => "鹿足郡津和野町枕瀬８０６－１",
              'google_url' => "https://goo.gl/maps/M1fbAoNYcf5J5QjW6",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 7,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -670,7 +670,7 @@ class ObservatorySeeder extends Seeder
              'address' => "井原市美星町大倉1723-70",
              'google_url' => "https://goo.gl/maps/X9C2EhNcc8i7rv2T9",
              'Coordinate' => "531,1413,9",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 7,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -684,7 +684,7 @@ class ObservatorySeeder extends Seeder
              'address' => "浅口市鴨方町本庄３０３７−５",
              'google_url' => "https://goo.gl/maps/t5KYtUXFzvz57yCD8",
              'Coordinate' => "543,1430,13",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 7,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -698,7 +698,7 @@ class ObservatorySeeder extends Seeder
              'address' => "阿南市那賀川町上福井南川渕8-1",
              'google_url' => "https://goo.gl/maps/MCpCj1YSVc3rhbUdA",
              'Coordinate' => "34,1516,12",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 8,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -712,7 +712,7 @@ class ObservatorySeeder extends Seeder
              'address' => "上浮穴郡久万高原町下畑野川乙488番",
              'google_url' => "https://goo.gl/maps/Le4FY8bmsMXs3Ecx8",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 8,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -726,7 +726,7 @@ class ObservatorySeeder extends Seeder
              'address' => "高知市追手筋2-1-1 オーテピア5F",
              'google_url' => "https://goo.gl/maps/gmpdqWEzDxo7T3jf8",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 8,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -740,7 +740,7 @@ class ObservatorySeeder extends Seeder
              'address' => "長岡郡大豊町佐賀山1248-3",
              'google_url' => "https://goo.gl/maps/riYssAhpSSmm58GR78",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 8,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -754,7 +754,7 @@ class ObservatorySeeder extends Seeder
              'address' => "香南市野市町西野303番1号",
              'google_url' => "https://goo.gl/maps/GeprmomPfod2rLkx9",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 8,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -768,7 +768,7 @@ class ObservatorySeeder extends Seeder
              'address' => "八女市星野村10816-5",
              'google_url' => "https://goo.gl/maps/ka4diZ6MTFTySV6o8",
              'Coordinate' => "242,1573,9",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -782,7 +782,7 @@ class ObservatorySeeder extends Seeder
              'address' => "長崎市油木町7番2号",
              'google_url' => "https://goo.gl/maps/h1fY42cXBfEyp2ab9",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -796,7 +796,7 @@ class ObservatorySeeder extends Seeder
              'address' => "五島市上大津町2873-1",
              'google_url' => "https://goo.gl/maps/As3ibtU5daF9Ys4P7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -810,7 +810,7 @@ class ObservatorySeeder extends Seeder
              'address' => "阿蘇郡南阿蘇村白川1810",
              'google_url' => "https://goo.gl/maps/uZBd6LPPSrJZ36SGA",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -824,7 +824,7 @@ class ObservatorySeeder extends Seeder
              'address' => "上益城郡山都町井無田",
              'google_url' => "https://goo.gl/maps/eWjB4SEmow1AGXir7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -838,7 +838,7 @@ class ObservatorySeeder extends Seeder
              'address' => "上天草市龍ヶ岳町大道3360-47",
              'google_url' => "https://goo.gl/maps/yiLA1seqo7vpMdPu6",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -852,7 +852,7 @@ class ObservatorySeeder extends Seeder
              'address' => "国東市安岐町富清2244",
              'google_url' => "https://goo.gl/maps/9mErNbJXcHaCCQaE7",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -866,7 +866,7 @@ class ObservatorySeeder extends Seeder
              'address' => "大分市佐賀関4057-419",
              'google_url' => "https://goo.gl/maps/LfwmePRbxp9t716U9",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -880,7 +880,7 @@ class ObservatorySeeder extends Seeder
              'address' => "都城市高崎町大牟田1461-22",
              'google_url' => "https://goo.gl/maps/qTJMGXe6qdYfiMoc8",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -894,7 +894,7 @@ class ObservatorySeeder extends Seeder
              'address' => "東臼杵郡美郷町北郷宇納間7579-2",
              'google_url' => "https://goo.gl/maps/6LGYj1ajKYfeZZU99",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -908,7 +908,7 @@ class ObservatorySeeder extends Seeder
              'address' => "薩摩川内市永利町2133-6",
              'google_url' => "https://goo.gl/maps/ANgGvRvQuuSJkXxc9",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -922,7 +922,7 @@ class ObservatorySeeder extends Seeder
              'address' => "鹿屋市輝北町市成1600-3",
              'google_url' => "https://goo.gl/maps/BW9aNoBcAwvjNetu5",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -936,7 +936,7 @@ class ObservatorySeeder extends Seeder
              'address' => "鹿児島郡十島村中之島",
              'google_url' => "https://goo.gl/maps/DKd9XvX29AZMvkyMA",
              'Coordinate' => "",
-             'JapanMap' => "×"
+             'JapanMap' => "×",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
@@ -950,7 +950,7 @@ class ObservatorySeeder extends Seeder
              'address' => "石垣市新川1024-1",
              'google_url' => "https://goo.gl/maps/LXJJsQMxF2G44Sw97",
              'Coordinate' => "1187,1900,11",
-             'JapanMap' => "○"
+             'JapanMap' => "○",
              'region_id' => 9,
              'created_at' => new DateTime(),
              'updated_at' => new DateTime(),
