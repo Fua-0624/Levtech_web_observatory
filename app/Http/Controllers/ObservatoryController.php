@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Region;
+use App\Models\Observatory;
 
 class ObservatoryController extends Controller
 {
-    public function home(){
-        return view('observatories/home');
+    public function home(Observatory $observatory){
+        return view('observatories/home')->with(['observatory'=> $observatory->get()]);
     }
+
 }

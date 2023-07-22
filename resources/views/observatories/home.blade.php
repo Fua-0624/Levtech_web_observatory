@@ -6,7 +6,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="{{ asset('/css/main.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="path/to/balloon.min.css">
+        <link rel="stylesheet" href="{{ asset('/css/balloon.css/balloon.min.css')}}">
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
     </head>
@@ -38,15 +38,6 @@
                     <area shape="circle" coords="242,1573,9" href="https://www.hoshinofurusato.jp/constellation/"/>
                     <area shape="circle" coords="1187,1900,11" href="https://murikabushi.jp/"/>
                 </map>
-                <div id="observatory" class="box">
-                    <p class="title">なよろ市立天文台きたすばる</p>
-                    <div class="txt">
-                        <ul>
-                            <li>宿泊施設：○</li>
-                            <li>プラネタリウム：×</li>
-                        </ul>
-                    </div>
-                </div>
 	        </div>
             
         <!--JavaScript-->
