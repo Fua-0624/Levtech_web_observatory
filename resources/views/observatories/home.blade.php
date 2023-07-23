@@ -22,39 +22,36 @@
              <div>
                 <img src="{{ asset('/css/image/Japan.PNG') }}" usemap="#Japan" alt="日本地図" class="map"/>
                 <map name="Japan">
-                    <area shape="circle" coords="1356,312,13" href="https://www.nayoro-star.jp/kitasubaru/" class="observatory"　data-tooltip="吹き出しテスト" onmouseover="showTooltip(1)"/>
-                    <area shape="circle" coords="1449,371,12" href="https://www.rikubetsu.jp/tenmon/"/>
-                    <area shape="circle" coords="1218,999,12" href="https://www.sendai-astro.jp/"/>
-                    <area shape="circle" coords="1049,1206,13" href="https://www.astron.pref.gunma.jp/"/>
-                    <area shape="circle" coords="939,1303,12" href="https://www.kyoto-su.ac.jp/observatory/"/>
-                    <area shape="circle" coords="734,1383,13" href="http://www.ioa.s.u-tokyo.ac.jp/kisohp/"/>
-                    <area shape="circle" coords="617,1388,15" href="http://www.nhao.jp/"/>
-                    <area shape="circle" coords="707,1492,11" href="http://www.obs.jp/"/>
-                    <area shape="circle" coords="695,1521,10" href="https://hidakagawa-kanko.jp/tomaru/tenmonkouen/"/>
-                    <area shape="circle" coords="587,1346,12" href="https://www.city.tottori.lg.jp/www/contents/1425466200201/"/>
-                    <area shape="circle" coords="531,1413,9" href="https://www.bao.city.ibara.okayama.jp/"/>
-                    <area shape="circle" coords="543,1430,13" href="http://www.oao.nao.ac.jp/"/>
-                    <area shape="circle" coords="634,1516,12" href="http://ananscience.jp/science/"/>
-                    <area shape="circle" coords="242,1573,9" href="https://www.hoshinofurusato.jp/constellation/"/>
-                    <area shape="circle" coords="1187,1900,11" href="https://murikabushi.jp/"/>
+                    @forEach($observatories as $observatory)
+                    <area shape="circle" coords="{{ $observatory->Coordinate }}" href="{{ $observatory->HP_link}}" class="observatory" onmouseover="showTooltip(1)"/>
+                    @endforEach
                 </map>
                 <div class="tooltip" id="tooltip">
                     <h2 id="title"></h2>
                     <p>宿泊施設:<span id="hotel"></span></p>
+                    <p>プラネタリウム:<span id="planetarium"></span></p>
+                    <p>住所:</p>
+                    <p>〒<span id="address_number"></span></p>
+                    <p><span id="address"></span></p>
                 </div>
 	        </div>
             
-        <!--JavaScript-->
+    　　<!--JavaScript-->
             <script>
                 $('img[usemap]').rwdImageMaps();
                 function showTooltip(area) {
-                    console.log(area);
                     const tooltip = document.getElementById('tooltip');
                     const title = document.getElementById('title');
                     const hotel = document.getElementById('hotel');
+                    const planetarium = document.getElementById('planetarium');
+                    const address_number = document.getElementById('address_number');
+                    const address = document.getElementById('address');
                     if (area === 1 ){
                         title.textContent = "なよろ市立天文台きたすばる";
                         hotel.textContent = "×";
+                        planetarium.textContent = "○";
+                        address_number.textContent = "123－456";
+                        address.textContent = "名寄市";
                     }
                     tooltip.style.display = 'block';
                     tooltip.style.left = event.pageX + 'px';

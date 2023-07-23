@@ -9,7 +9,7 @@ use App\Models\Observatory;
 class ObservatoryController extends Controller
 {
     public function home(Observatory $observatory){
-        return view('observatories/home')->with(['observatories'=> $observatory->where('JapanMap','○')->get()]);
+        return view('observatories/home')->with(['observatories'=>$observatory->getByJapanMap()]);
     }
 
 }
