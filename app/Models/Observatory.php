@@ -11,7 +11,11 @@ class Observatory extends Model
     use HasFactory;
     
     public function region(){
-        return $this -> hasMany(Region::class);
+        return $this -> belongsTo(Region::class,'region_id');
+    }
+    
+    public function getByJapanMap(){
+        return $this::where('JapanMap','○')->get();
     }
     
 }

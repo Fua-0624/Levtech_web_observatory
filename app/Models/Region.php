@@ -10,7 +10,7 @@ class Region extends Model
     use HasFactory;
     
     public function observatories(){
-        return $this -> belongsTo(Observatory::class);
+        return $this -> hasMany(Observatory::class);
     }
     
     public function getByRegion(){
