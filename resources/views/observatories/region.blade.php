@@ -14,15 +14,13 @@
     
     <!--表示画面-->
     <x-app-layout>
-        <x-slot>
-            <select name = "observatory[region_id]" class="font-semibold text-xl text-gray-800 leading-tight">
-                @foreach($regions as $region)
-                <option value = {{ $region_id}}>{{ $regions->region_name }}</option>
-                @endforeach
-            </select>
+        <x-slot name="header">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __({{ $observatories->region->region_name}}) }}
+            </h2>
         </x-slot>
         <body>
-            <img src="{{ asset({{ $observatories->region_region}}) }}" usemap="#Japan" alt="日本地図" class="map"/>
+            <img src="{{ asset({{ $observatories->region->region_image}}) }}"  alt={{ $observatories->region->region_name}} class="map"/>
         </body>
         
     </x-app-layout>
