@@ -11,20 +11,20 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
     </head>
     
+    <!--表示画面-->        
     <x-app-layout>
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{ __('HOME') }}
             </h2>
          </x-slot>
-    <!--表示画面-->     
          <body>
              <div>
                 <img src="{{ asset('/css/image/Japan.PNG') }}" usemap="#Japan" alt="日本地図" class="map"/>
                 <map name="Japan">
-                    @forEach($observatories as $observatory)
-                    <area shape="circle" coords="{{ $observatory->Coordinate }}" href="{{ $observatory->HP_link}}" class="observatory" onmouseover="showTooltip(1)"/>
-                    @endforEach
+                    @foreach($observatories as $key => $observatory)
+                    <area shape="circle" coords="{{ $observatory->Coordinate }}" href="{{ $observatory->HP_link}}" class="observatory" onmouseover="showTooltip({{ $key }})"/>
+                    @endforeach
                 </map>
                 <div class="tooltip" id="tooltip">
                     <h2 id="title"></h2>
@@ -40,18 +40,19 @@
             <script>
                 $('img[usemap]').rwdImageMaps();
                 function showTooltip(area) {
+                    const data = @json($observatories);
                     const tooltip = document.getElementById('tooltip');
                     const title = document.getElementById('title');
                     const hotel = document.getElementById('hotel');
                     const planetarium = document.getElementById('planetarium');
                     const address_number = document.getElementById('address_number');
                     const address = document.getElementById('address');
-                    if (area === 1 ){
-                        title.textContent = "なよろ市立天文台きたすばる";
-                        hotel.textContent = "×";
-                        planetarium.textContent = "○";
-                        address_number.textContent = "123－456";
-                        address.textContent = "名寄市";
+                    if (isFinite(area)){
+                        title.textContent = data[area].observatory;
+                        hotel.textContent = data[area].hotel;
+                        planetarium.textContent = data[area].planetarium;
+                        address_number.textContent = data[area].address_number;
+                        address.textContent = data[area].address;
                     }
                     tooltip.style.display = 'block';
                     tooltip.style.left = event.pageX + 'px';

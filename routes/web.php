@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ObservatoryController;
+use App\Http\Controllers\RegionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +15,16 @@ use App\Http\Controllers\ObservatoryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
-Route::get('/home',[ObservatoryController::class,"home"])->name('home');
-//Route::get('/regions/{region}',[RegionController::class,'region']->name('region'));
+Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+Route::get('/',[ObservatoryController::class,"home"])->name('home');
+Route::get('/regions/{region}',[RegionController::class,'region'])->name('region');
 require __DIR__.'/auth.php';

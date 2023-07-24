@@ -697,7 +697,7 @@ class ObservatorySeeder extends Seeder
              'address_number' => "779-1243",
              'address' => "阿南市那賀川町上福井南川渕8-1",
              'google_url' => "https://goo.gl/maps/MCpCj1YSVc3rhbUdA",
-             'Coordinate' => "34,1516,12",
+             'Coordinate' => "635,1516,12",
              'JapanMap' => "○",
              'region_id' => 8,
              'created_at' => new DateTime(),
