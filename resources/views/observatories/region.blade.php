@@ -20,7 +20,31 @@
             </h2>
         </x-slot>
         <body>
-            <img src="{{ asset({{ $observatories->region->region_image}}) }}"  alt={{ $observatories->region->region_name}} class="map"/>
+            <img src="{{ asset('/css/image/Hokaido.PNG')}}"  alt={{ $observatories->region->region_name}} class="map"/>
+            <table class="table-auto">
+                <thead>
+                    <tr>
+                    <th>番号</th>
+                    <th>県名</th>
+                    <th>天文台名</th>
+                    <th>宿泊施設</th>
+                    <th>プラネタリウム</th>
+                    <th>住所</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($observatories as $observatory)
+                    <tr>
+                    <td>{{ $observatory->id }}</td>
+                    <td>{{ $observatory->prefecture }}</td>
+                    <td>{{ $observatory->observatory }}</td>
+                    <td>{{ $observatory->hotel }}</td>
+                    <td>{{ $observatory->planetarium }}</td>
+                    <td>{{ $observatory->address_number}}<br>{{ $observatory->address }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </body>
         
     </x-app-layout>
