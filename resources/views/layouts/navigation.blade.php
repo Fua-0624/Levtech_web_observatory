@@ -15,7 +15,7 @@
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('HOME') }}
                     </x-nav-link>
-                    @auth
+                    
                     <x-dropdown>
                         <x-slot name="trigger">
                             <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
@@ -28,14 +28,36 @@
                             </button>
                         </x-slot>
                         <x-slot name="content">
-                            @foreach($regions as $region)
-                            <x-dropdown-link :href="route('region')">
-                                {{ __($region->name)}}
+                            <x-dropdown-link :href="route('region',2)">
+                                {{ __('北海道')}}
                             </x-dropdown-link>
-                            @endforeach
+                            <x-dropdown-link :href="route('region',3)">
+                                {{ __('東北地方')}}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('region',4)">
+                                {{ __('関東地方')}}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('region',5)">
+                                {{ __('中部地方')}}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('region',6)">
+                                {{ __('近畿地方')}}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('region',7)">
+                                {{ __('中国地方')}}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('region',8)">
+                                {{ __('四国地方')}}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('region',9)">
+                                {{ __('九州地方')}}
+                            </x-dropdown-link>
                         </x-slot>
                     </x-dropdown>
-                    @endauth
+                    
+                    <x-nav-link :href="route('comment')" :active="request()->routeIs('comment')">
+                        {{ __('コメント') }}
+                    </x-nav-link>
                 </div>
             </div>
             @auth

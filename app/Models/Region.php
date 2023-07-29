@@ -5,16 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Observatory;
+use App\Models\Region;
 
 class Region extends Model
 {
     use HasFactory;
     
     public function observatories(){
-        return $this -> hasMany(Observatory::class);
+        return $this->hasMany(Observatory::class);
     }
     
-    public function getByRegion(){
-        return $this->observatories()->with('region');
-    }
 }
