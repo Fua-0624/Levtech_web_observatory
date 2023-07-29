@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Region;
-use App\Model\Observatory;
+use App\Models\Observatory;
 
 class RegionController extends Controller
 {
   public function region(Region $region){
-      return view('observatories/region')->with(['observatories'=>$region->getByRegion()]);
+      //dd($region->observatories()->get());
+      return view('observatories/region')->with(['observatories'=>$region->observatories()->get(), 'region' =>$region]);
   }
 }

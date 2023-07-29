@@ -8,8 +8,8 @@ use App\Models\Observatory;
 
 class ObservatoryController extends Controller
 {
-    public function home(Observatory $observatory){
-        return view('observatories/home')->with(['observatories'=>$observatory->getByJapanMap()]);
+    public function home(Observatory $observatory, Region $region ){
+        return view('observatories/home')->with(['observatories'=>$observatory->getByJapanMap(), 'regions' => $region->get()]);
     }
 
 }

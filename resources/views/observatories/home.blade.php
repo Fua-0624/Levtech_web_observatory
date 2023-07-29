@@ -5,10 +5,6 @@
         <title>全国の天文台</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link href="{{ asset('/css/main.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('/css/balloon.css/balloon.min.css')}}">
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
     </head>
     
     <!--表示画面-->        
