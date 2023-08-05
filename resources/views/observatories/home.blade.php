@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <title>全国の天文台</title>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    </head>
-    
+
     <!--表示画面-->        
     <x-app-layout>
         <x-slot name="header">
@@ -14,7 +6,6 @@
                 {{ __('HOME') }}
             </h2>
          </x-slot>
-         <body>
              <div>
                 <img src="{{ asset('/css/image/Japan.PNG') }}" usemap="#Japan" alt="日本地図" class="map"/>
                 <map name="Japan">
@@ -66,8 +57,4 @@
                 });
             </script>
             
-         </body>
     </x-app-layout>
-
-
-</html>

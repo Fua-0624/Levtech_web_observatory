@@ -424,7 +424,7 @@ class ObservatorySeeder extends Seeder
              'updated_at' => new DateTime(),
             ],
             ['prefecture' => "滋賀県",
-             'observatory' => "ダイニックアス��ロパーク天究館",
+             'observatory' => "ダイニックアストロパーク天究館",
              'hotel' => "×",
              'planetarium' => "×",
              'HP_link' => "https://www.dynic.co.jp/astro/",

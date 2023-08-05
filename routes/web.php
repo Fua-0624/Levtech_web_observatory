@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ObservatoryController;
 use App\Http\Controllers\RegionController;
-use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ThreadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +26,19 @@ Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit')
 Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-Route::get('/',[ObservatoryController::class,"home"])->name('home');
+Route::controller(ObservatoryController::class)->group(function(){
+    Route::get('/','home')->name('home');
+    Route::get('/observatories/{observatory}','index')->name('index'); 
+});
+
 Route::get('/regions/{region}',[RegionController::class,'region'])->name('region');
-Route::get('/comment',[CommentController::class,'create'])->name('comment');
+
+Route::controller(ThreadController::class)->group(function(){
+    Route::post('/observatories/threads','store');
+    Route::get('/threads/create','create')->name('create');
+    Route::put('/threads/{thread}','update');
+    Route::delete('/threads/{thread}','delete');
+    Route::get('/threads/{thread}/edit','edit');
+});
+
 require __DIR__.'/auth.php';

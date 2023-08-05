@@ -9,7 +9,7 @@
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>全国の天文台</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
