@@ -1,7 +1,7 @@
   <x-app-layout>
     <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('コメント作成') }}
+                {{ __('スレッド作成') }}
             </h2>
         </x-slot>
              <form action="/observatories/threads" , method="POST">
@@ -13,6 +13,8 @@
                     @endforeach
                 </select>
                 <div class="body">
+                    <h2>タイトル</h2>
+                    <input type="text" name="thread[title]" placeholder="タイトル">
                     <h2>コメント</h2>
                     <textarea name="thread[article]" placeholder="追加情報などを書いてください"></textarea>
                 </div>

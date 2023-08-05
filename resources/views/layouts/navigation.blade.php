@@ -56,7 +56,7 @@
                     </x-dropdown>
                     
                     <x-nav-link :href="route('create')" :active="request()->routeIs('create')">
-                        {{ __('コメント作成') }}
+                        {{ __('スレッド作成') }}
                     </x-nav-link>
                 </div>
             </div>
