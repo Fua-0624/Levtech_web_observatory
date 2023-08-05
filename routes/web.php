@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ObservatoryController;
 use App\Http\Controllers\RegionController;
 use App\Http\Controllers\ThreadController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.
 
 Route::controller(ObservatoryController::class)->group(function(){
     Route::get('/','home')->name('home');
-    Route::get('/observatories/{observatory}','index')->name('index'); 
+    Route::get('/observatories/{observatory}/threads','index')->name('index'); 
 });
 
 Route::get('/regions/{region}',[RegionController::class,'region'])->name('region');
@@ -36,9 +37,15 @@ Route::get('/regions/{region}',[RegionController::class,'region'])->name('region
 Route::controller(ThreadController::class)->group(function(){
     Route::post('/observatories/threads','store');
     Route::get('/threads/create','create')->name('create');
+    Route::get('/threads/{thread}','detail');
     Route::put('/threads/{thread}','update');
     Route::delete('/threads/{thread}','delete');
     Route::get('/threads/{thread}/edit','edit');
+});
+
+Route::controller(CommentController::class)->group(function(){
+    Route::post('/threads/comments','store');
+    Route::get('/threads/{thread}/comments/create','create');
 });
 
 require __DIR__.'/auth.php';

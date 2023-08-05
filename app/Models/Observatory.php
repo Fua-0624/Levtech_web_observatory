@@ -23,5 +23,4 @@ class Observatory extends Model
     public function getByJapanMap(){
         return $this::where('JapanMap','○')->get();
     }
-    
 }

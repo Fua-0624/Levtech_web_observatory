@@ -12,6 +12,10 @@ class ThreadController extends Controller
         return view('threads/create')->with(['observatories' => $observatory->get()]);
     }
     
+    public function detail(Thread $thread){
+        return view('threads/detail')->with(['thread'=>$thread, 'comments'=>$thread->comments()->get()]);
+    }
+    
     public function store(Request $request, Thread $thread, Observatory $observatory){
         $input = $request['thread'];
         $thread->fill($input)->save();
@@ -31,6 +35,7 @@ class ThreadController extends Controller
     
     public function delete(Thread $thread){
         $thread->delete();
-        return redirect('/');
+        return redirect('/observatories/{observatory}/threads');
     }
+
 }

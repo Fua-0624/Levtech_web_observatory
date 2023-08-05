@@ -1,0 +1,17 @@
+a{
+   display: block;
+   margin: 1px;
+   border: 1px solid #ccccff;
+   text-align: center;
+   text-decoration: none;
+   line-height: 1.5;
+}
+
+form{
+   display: block;
+   margin: 1px;
+   border: 1px solid #ccccff;
+   text-align: center;
+   text-decoration: none;
+   line-height: 1.5;
+}
