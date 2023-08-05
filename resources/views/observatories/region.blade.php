@@ -28,6 +28,7 @@
                     <th>宿泊施設</th>
                     <th>プラネタリウム</th>
                     <th>住所</th>
+                    <th>コメント</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,6 +40,9 @@
                     <td>{{ $observatory->hotel }}</td>
                     <td>{{ $observatory->planetarium }}</td>
                     <td>〒{{ $observatory->address_number }}<br><a href="{{ $observatory->google_url }}">{{ $observatory->address }}</a></td>
+                    <td>
+                        <a href="/observatories/{{ $observatory->id }}">あり</a>
+                    </td>
                     </tr>
                     @endforeach
                 </tbody>

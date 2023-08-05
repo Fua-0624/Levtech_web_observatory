@@ -20,9 +20,8 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        $this->call(
-            //ObservatorySeeder::class,
-            RegionSeeder::class,
-        );
+        $this->call(ObservatorySeeder::class);
+        $this->call(RegionSeeder::class);
+        
     }
 }

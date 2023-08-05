@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Region;
 use App\Models\Observatory;
+use App\Models\Thread;
 
 class RegionController extends Controller
 {

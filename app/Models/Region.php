@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Observatory;
 use App\Models\Region;
+use App\Models\Thread;
 
 class Region extends Model
 {
