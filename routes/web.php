@@ -40,7 +40,7 @@ Route::controller(ThreadController::class)->group(function(){
     Route::get('/threads/{thread}','detail');
     Route::put('/threads/{thread}','update');
     Route::delete('/threads/{thread}','delete');
-    Route::get('/threads/{thread}/edit','edit');
+    Route::get('/observatories/{thread}/edit','edit');
 });
 
 Route::controller(CommentController::class)->group(function(){

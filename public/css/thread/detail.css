@@ -1,17 +1,61 @@
-a{
-   display: block;
-   margin: 1px;
-   border: 1px solid #ccccff;
-   text-align: center;
-   text-decoration: none;
-   line-height: 1.5;
+/*ボタンの設定*/
+.btn,
+a.btn,
+button.btn{
+  color: black;
+  background-color: #BBBBBB;
+  margin: 5px;
+  padding:2px 10px 2px 10px;
+  
+}
+.btn:hover,
+a.btn:hover,
+button.btn:hover{
+  color: white;
+  background: black;
+  margin:5px;
+  padding:2px 10px 2px 10px;
 }
 
-form{
-   display: block;
-   margin: 1px;
-   border: 1px solid #ccccff;
-   text-align: center;
-   text-decoration: none;
-   line-height: 1.5;
+a.btn--radius,
+button.btn--radius{
+   border-radius: 100vh;
+}
+
+/*コメント区切り線の設定*/
+span{
+    border: 2px solid #cccccc;     
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    position: relative;
+}
+span:before,
+span:after{
+    border-bottom: 2px solid #cccccc;
+    content: '';
+    margin: 0 3px;
+    position: absolute;
+    top: 50%;
+    width: 100vw;
+}
+span:before{
+    right: 100%;
+}
+span:after{
+    left: 100%;
+}
+
+
+.button{
+   display:flex;
+}
+.thread{
+   background-color:#DDDDDD;
+}
+.comment{
+   padding: 20px;
+   text-align:  center; 
+}
+.body{
+   padding-left:20px;
 }
