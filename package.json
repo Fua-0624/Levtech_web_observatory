@@ -15,4 +15,9 @@
         "tailwindcss": "^3.3.3",
         "vite": "^4.0.0"
     }
+    "scripts":{
+        "dev": "vite",
+        "build": "vite build", 
+        "heroku-postbuild": "npm run build"
+    }
 }
