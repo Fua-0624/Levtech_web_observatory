@@ -4,7 +4,7 @@
             {{ __('HOME') }}
         </h2>
     </x-slot>
-        <div>
+        <div class="map">
             <img src="{{ asset('/css/image/Japan.PNG') }}" usemap="#Japan" alt="日本地図" class="map"/>
             <map name="Japan">
                 @foreach($observatories as $key => $observatory)

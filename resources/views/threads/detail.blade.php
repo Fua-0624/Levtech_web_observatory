@@ -25,19 +25,20 @@
                 <p><span>コメント</span></p>
                 <a class="btn btn--radius" href="/threads/{{ $thread->id }}/comments/create">コメント作成はこちら</a>
             </div>
-            
-            <div class="main-side-wrap body">
-                <div class="main-section">
-                    <div class="item">
-                        @foreach($comments as $comment)
-                        <p class="text-xs">作成日:{{ $comment->updated_at }}</p>
-                        <h2>{{ $comment->article }}</h2>
-                        </br>
-                        @endforeach
-                        <p id="moreRead" class="more-read">もっと見る</p>
-                    </div>
+            <select name="order-select">
+                <option>新しい順</option>
+                <option>古い順</option>
+            </select>
+                <div class="item">
+                    @foreach($comments as $comment)
+                    <p class="text-xs">作成日:{{ $comment->updated_at }}</p>
+                    <h2>{{ $comment->article }}</h2>
+                    </br>
+                    @endforeach
+                    <button id="moreRead" class="more-read">もっと見る</button>
                 </div>
-            </div>
+                
+    <!--JavaScript-->
     <script>
         function deleteThread(id){
             'use strict'
@@ -47,4 +48,6 @@
             }
         }
     </script>
+    <script type="text/javascript">var add = @json(count($comments))</script>
+    <script type="text/javascript" src="{{ asset('/js/Threadindex.js') }}"></script>
 </x-app-layout>

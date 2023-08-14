@@ -21,6 +21,9 @@ a.btn--radius,
 button.btn--radius{
    border-radius: 100vh;
 }
+.button{
+   display:flex;
+}
 
 /*コメント区切り線の設定*/
 span{
@@ -45,10 +48,6 @@ span:after{
     left: 100%;
 }
 
-
-.button{
-   display:flex;
-}
 .thread{
    background-color:#DDDDDD;
 }

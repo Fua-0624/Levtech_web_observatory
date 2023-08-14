@@ -8,18 +8,20 @@ img {
     height: auto;
 }
 
+
 /* 吹き出しのスタイル */
         .tooltip {
             position: absolute;
             padding: 8px;
-            background-color: #f0f0f0;
+            background-color: #D7EEFF;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
             display: none;
             z-index: 5;
         }
-
+        
+/*表のスタイル*/
 table{
   width: 100%;
   border-collapse: collapse;
@@ -32,10 +34,16 @@ table th,table td{
 }
 
 table tr:nth-child(odd){
-  background-color: #eee
+  background-color: #D7EEFF
 }
+
 
 .logo{
   width:50px;
   height:auto;
+}
+
+.map{
+  max-width:600px;
+  width:100vw;
 }
