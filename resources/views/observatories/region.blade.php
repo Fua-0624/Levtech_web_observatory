@@ -4,8 +4,9 @@
             {{ $region->region_name }}
         </h2>
     </x-slot>
-    <body>
+    <div class="map"> 
         <img src="{{ asset( $region->region_image )}}"  alt='北海道' class="map"/>
+    </div>  
         <table class="table">
             <thead>
                 <tr>
