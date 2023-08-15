@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('hotel');
             $table->string('planetarium');
             $table->string('HP_link');
+            $table->string('TwitterURL')->nullable();
+            $table->string('InstagramURL')->nullable();
             $table->string('address_number');
             $table->string('address');
             $table->string('google_url');

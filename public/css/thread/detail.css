@@ -3,7 +3,7 @@
 a.btn,
 button.btn{
   color: black;
-  background-color: #BBBBBB;
+  background-color: #EEFFFF;
   margin: 5px;
   padding:2px 10px 2px 10px;
   
@@ -11,8 +11,8 @@ button.btn{
 .btn:hover,
 a.btn:hover,
 button.btn:hover{
-  color: white;
-  background: black;
+  color: black;
+  background: #A4C6FF;
   margin:5px;
   padding:2px 10px 2px 10px;
 }
@@ -27,14 +27,14 @@ button.btn--radius{
 
 /*コメント区切り線の設定*/
 span{
-    border: 2px solid #cccccc;     
+    border: 2px solid #A4C6FF;     
     display: inline-block;
     padding: 0.25em 0.5em;
     position: relative;
 }
 span:before,
 span:after{
-    border-bottom: 2px solid #cccccc;
+    border-bottom: 2px solid #A4C6FF;
     content: '';
     margin: 0 3px;
     position: absolute;
@@ -49,7 +49,7 @@ span:after{
 }
 
 .thread{
-   background-color:#DDDDDD;
+   background-color:#A4C6FF;
 }
 .comment{
    padding: 20px;

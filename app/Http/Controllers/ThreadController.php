@@ -16,7 +16,7 @@ class ThreadController extends Controller
         return view('threads/detail')->with(['thread'=>$thread, 'comments'=>$thread->comments()->get()]);
     }
     
-    public function store(Request $request, Thread $thread, Observatory $observatory){
+    public function store(Request $request, Thread $thread){
         $input = $request['thread'];
         $thread->fill($input)->save();
         return redirect('/');

@@ -38,13 +38,12 @@ const moreBtn = () => {
 }
 moreBtn();
 
-let select = document.querySelector(`select[name='order-select']`);
+/*let select = document.querySelector(`select[name='order-select']`);
 select.addEventListener(`change`, () => {
-    
     if ( select.options[1] == '新しい順'){
-        
+        thread_date.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
     }
     else{
-        
+        thread_date.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
     }
-});
+});*/

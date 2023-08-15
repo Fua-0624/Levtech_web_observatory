@@ -13,11 +13,11 @@
             </map>
             <div class="tooltip" id="tooltip">
                 <p id="title" class="text-lg font-semibold"></p>
-                <p>宿泊施設:<span id="hotel"></span></p>
-                <p>プラネタリウム:<span id="planetarium"></span></p>
-                <p>住所:</p>
-                <p>〒<span id="address_number"></span></p>
-                <p><span id="address"></span></p>
+                <p class="text-sm">宿泊施設:<span class="font-medium" id="hotel"></span></p>
+                <p class="text-sm">プラネタリウム:<span class="font-medium" id="planetarium"></span></p>
+                <p class="text-sm">住所:</p>
+                <p class="text-sm">〒<span class="font-medium" id="address_number"></span></p>
+                <p class="text-sm"><span class="font-medium" id="address"></span></p>
             </div>
 	    </div>
             

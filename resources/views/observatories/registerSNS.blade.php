@@ -1,13 +1,13 @@
 <x-app-layout>
     <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('スレッド作成') }}
+                {{ __('SNS登録') }}
             </h2>
         </x-slot>
-             <form action="/observatories/threads" , method="POST">
+             <form action="/observatories/SNS" , method="POST">
                 @csrf
                 <h2>天文台名</h2>
-                <select name="thread[observatory_id]">
+                <select name="observatory_id">
                     @php
                         $regionid = -1 ;
                     @endphp
@@ -22,10 +22,10 @@
                     @endforeach
                 </select>
                 <div class="body">
-                    <h2>タイトル</h2>
-                    <input type="text" name="thread[title]" placeholder="タイトル">
-                    <h2>コメント</h2>
-                    <textarea name="thread[article]" placeholder="追加情報などを書いてください"></textarea>
+                    <h2>X(ツイッター)URL登録</h2>
+                    <textarea name="TwitterURL" placeholder="X(ツイッター)のURLを登録してください。登録しない場合は空白で大丈夫です。"></textarea>
+                    <h2>インスタグラムURL登録</h2>
+                    <textarea name="InstagramURL" placeholder="インスタグラムのURLを登録してください。登録しない場合は空白で大丈夫です。"></textarea>
                 </div>
                 <input type="submit" value="送信">
              </form>

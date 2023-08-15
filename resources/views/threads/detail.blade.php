@@ -25,15 +25,13 @@
                 <p><span>コメント</span></p>
                 <a class="btn btn--radius" href="/threads/{{ $thread->id }}/comments/create">コメント作成はこちら</a>
             </div>
-            <select name="order-select">
-                <option>新しい順</option>
-                <option>古い順</option>
-            </select>
                 <div class="item">
                     @foreach($comments as $comment)
-                    <p class="text-xs">作成日:{{ $comment->updated_at }}</p>
-                    <h2>{{ $comment->article }}</h2>
-                    </br>
+                    <div>
+                        <p class="text-xs">作成日:{{ $comment->updated_at }}</p>
+                        <h2>{{ $comment->article }}</h2>
+                        </br>
+                    </div>
                     @endforeach
                     <button id="moreRead" class="more-read">もっと見る</button>
                 </div>
