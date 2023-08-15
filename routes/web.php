@@ -32,6 +32,9 @@ Route::controller(ObservatoryController::class)->group(function(){
     Route::get('/observatories/{observatory}/threads','index')->name('index');
     Route::get('/observatories/registerSNS','registerSNS')->name('registerSNS');
     Route::post('/observatories/SNS','store');
+    Route::put('/observatories/{observatory}','update');
+    Route::delete('/observatories/{obseravtory}','delete');
+    Route::get('/observatories/{observatory}/edit','edit');
 });
 
 Route::get('/regions/{region}',[RegionController::class,'region'])->name('region');
@@ -42,7 +45,7 @@ Route::controller(ThreadController::class)->group(function(){
     Route::get('/threads/{thread}','detail');
     Route::put('/threads/{thread}','update');
     Route::delete('/threads/{thread}','delete');
-    Route::get('/observatories/{thread}/edit','edit');
+    Route::get('/threads/{thread}/edit','edit');
 });
 
 Route::controller(CommentController::class)->group(function(){

@@ -6,16 +6,24 @@
         </x-slot>
             <div class="SNS">
                 @if( $observatory->TwitterURL != NULL)
-                    <a class="SNS_child" href="{{ $observatory->TwitterURL }}">X(ツイッター)はこちら</a>
+                    <a class="SNS_child" href="{{ $observatory->TwitterURL }}"><font color="bule">X(ツイッター)はこちら</font></a>
                 @else 
                     <p class="SNS_child">X(ツイッター)は未登録です</p>
                 @endif
                 @if( $observatory->InstagramURL != NULL)
-                    <a class="SNS_child" href="{{ $observatory->InstagramURL }}">インスタグラムはこちら</a>
+                    <a class="SNS_child" href="{{ $observatory->InstagramURL }}"><font color="blue">インスタグラムはこちら</font></a>
                 @else
                     <p class="SNS_child">インスタグラムは未登録です</p>
                 @endif
             </div>
+            
+            <a class="btn btn--radius" href="/observatories/{{ $observatory->id }}/edit">編集</a>
+            <form action="/threads/{{ $observatory->id }}" id="form_{{ $observatory->id }}" method="post">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn--radius" type="button" onclick="deleteSNS({{ $observatory->id }})">削除</button>
+            </form>
+            
             <select name="input-select">
                 <option value="asc">古い順</option>
                 <option value="desc">新しい順</option>
@@ -31,19 +39,28 @@
                     @foreach($threads as $thread)
                     <tr class="item_child">
                         <td class="item_child_content">{{ $thread->updated_at }}</td>
-                        <td><a href="/threads/{{ $thread->id }}">{{ $thread->title }}</a></td>
+                        <td><a href="/threads/{{ $thread->id }}"><font color="blue">{{ $thread->title }}</font></a></td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
             <div class="more-read-button">
-                <button id="moreRead" class="more-read">もっと見る</button>
+                <button id="moreRead" class="more-read btn btn--radius">もっと見る</button>
             </div>
 
 
 </x-app-layout>
 
 <!--JavaScript-->
+<script>
+    function deleteSNS(id){
+        'use strict'
+            
+        if(confirm('削除すると復元できません。\n本当に削除しますか?')){
+            document.getElementById(`form_${id}`).submit();
+        }
+    }
+</script>
 <script>
     window.addEventListener('DOMContentLoaded',function(){
         var inputSelect = document.querySelector('[name="input-select"]');

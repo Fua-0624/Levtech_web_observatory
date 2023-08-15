@@ -19,7 +19,7 @@ class ThreadController extends Controller
     public function store(Request $request, Thread $thread){
         $input = $request['thread'];
         $thread->fill($input)->save();
-        return redirect('/');
+        return redirect('/observatories/'.$thread->observatory->id.'/threads');
     }
     
     public function edit(Thread $thread){
@@ -29,13 +29,12 @@ class ThreadController extends Controller
     public function update(Request $request, Thread $thread){
         $input_thread = $request['thread'];
         $thread->fill($input_thread)->save();
-        
-        return redirect('/');
+        return redirect('/observatories/'.$thread->observatory->id.'/threads');
     }
     
     public function delete(Thread $thread){
         $thread->delete();
-        return redirect('/observatories/{observatory}/threads');
+        return redirect('/observatories/'.$thread->observatory->id.'/threads');
     }
 
 }

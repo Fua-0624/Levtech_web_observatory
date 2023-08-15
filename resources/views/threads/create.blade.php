@@ -27,9 +27,9 @@
                     <h2>コメント</h2>
                     <textarea name="thread[article]" placeholder="追加情報などを書いてください"></textarea>
                 </div>
-                <input type="submit" value="送信">
+                <input class="btn btn--radius" type="submit" value="送信">
              </form>
              <div class="footer">
-                 <a href="/">HOME画面に戻る</a>
+                 <a class="btn btn--radius" href="/">HOME画面に戻る</a>
              </div>
 </x-app-layout>

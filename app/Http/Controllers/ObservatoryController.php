@@ -27,7 +27,25 @@ class ObservatoryController extends Controller
         $observatory->TwitterURL = $request['TwitterURL'];
         $observatory->InstagramURL = $request['InstagramURL'];
         $observatory->save();
-        return redirect('/');
+        return redirect('/observatories/'.$observatory->id.'/threads');
+    }
+    
+    public function edit(Observatory $observatory){
+        return view('observatories/editSNS')->with(['observatory'=>$observatory]);
+    }
+    
+    public function update(Request $request, Observatory $observatory){
+        $observatory_id = $request['observatory_id'];
+        $observatory = Observatory::where('id', $observatory_id)->first();
+        $observatory->TwitterURL = $request['TwitterURL'];
+        $observatory->InstagramURL = $request['InstagramURL'];
+        $observatory->save();
+        return redirect('/observatories/'.$observatory->id.'/threads');
+    }
+    
+    public function delete(Observatory $observatory){
+        $thread->delete();
+        return redirect('/observatories/'.$observatory->id.'/threads');
     }
 
 }

@@ -4,6 +4,8 @@
             {{ __('HOME') }}
         </h2>
     </x-slot>
+    <h2 class="text-lg font-semibold" style="text-align:center;">ようこそ！</h2>
+    <p style="text-align:center;">！日本地図の星をクリックすると天文台のHPに飛ぶことができます</p>
         <div class="map">
             <img src="{{ asset('/css/image/Japan.PNG') }}" usemap="#Japan" alt="日本地図" class="map"/>
             <map name="Japan">

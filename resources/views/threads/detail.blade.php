@@ -14,7 +14,7 @@
             <p class="text-lg">{{ $thread->article }}</p>
         </div>
         
-        <a class="btn btn--radius" href="/observatories/{{ $thread->id}}/edit">編集</a>
+        <a class="btn btn--radius" href="/threads/{{ $thread->id}}/edit">編集</a>
         <form action="/threads/{{ $thread->id }}" id="form_{{ $thread->id }}" method="post">
             @csrf
             @method('DELETE')
@@ -33,7 +33,7 @@
                         </br>
                     </div>
                     @endforeach
-                    <button id="moreRead" class="more-read">もっと見る</button>
+                    <button id="moreRead" class="more-read btn btn--radius">もっと見る</button>
                 </div>
                 
     <!--JavaScript-->
