@@ -16,5 +16,18 @@ class ObservatoryController extends Controller
     public function index(Observatory $observatory){
         return view('threads/index')->with(['observatory'=>$observatory, 'threads'=>$observatory->threads()->get()]);
     }
+    
+    public function registerSNS(Observatory $observatory){
+        return view('observatories/registerSNS')->with(['observatories'=>$observatory->get()]);
+    }
+    
+    public function store(Request $request, Observatory $observatory){
+        $observatory_id = $request['observatory_id'];
+        $observatory = Observatory::where('id', $observatory_id)->first();
+        $observatory->TwitterURL = $request['TwitterURL'];
+        $observatory->InstagramURL = $request['InstagramURL'];
+        $observatory->save();
+        return redirect('/');
+    }
 
 }

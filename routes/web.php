@@ -29,7 +29,9 @@ Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.
 
 Route::controller(ObservatoryController::class)->group(function(){
     Route::get('/','home')->name('home');
-    Route::get('/observatories/{observatory}/threads','index')->name('index'); 
+    Route::get('/observatories/{observatory}/threads','index')->name('index');
+    Route::get('/observatories/registerSNS','registerSNS')->name('registerSNS');
+    Route::post('/observatories/SNS','store');
 });
 
 Route::get('/regions/{region}',[RegionController::class,'region'])->name('region');
