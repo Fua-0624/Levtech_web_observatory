@@ -64,3 +64,33 @@ table td{
 table tr:nth-child(odd){
   background-color: #EEFFFF
 }
+
+/*ボタンの設定*/
+.btn,
+a.btn,
+button.btn,
+input.btn{
+  color: black;
+  background-color: #D7EEFF	;
+  margin: 5px;
+  padding:2px 10px 2px 10px;
+  
+}
+.btn:hover,
+a.btn:hover,
+button.btn:hover
+input.btn:hover{
+  color: black;
+  background: #A4C6FF;
+  margin:5px;
+  padding:2px 10px 2px 10px;
+}
+
+a.btn--radius,
+button.btn--radius,
+input.btn--radius{
+   border-radius: 100vh;
+}
+.button{
+   display:flex;
+}

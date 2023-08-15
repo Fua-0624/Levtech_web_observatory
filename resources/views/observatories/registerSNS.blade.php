@@ -27,9 +27,9 @@
                     <h2>インスタグラムURL登録</h2>
                     <textarea name="InstagramURL" placeholder="インスタグラムのURLを登録してください。登録しない場合は空白で大丈夫です。"></textarea>
                 </div>
-                <input type="submit" value="送信">
+                <input class="btn btn--radius" type="submit" value="送信">
              </form>
              <div class="footer">
-                 <a href="/">HOME画面に戻る</a>
+                 <a class="btn btn--radius" href="/">HOME画面に戻る</a>
              </div>
 </x-app-layout>
