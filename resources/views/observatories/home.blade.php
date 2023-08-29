@@ -4,8 +4,13 @@
             {{ __('HOME') }}
         </h2>
     </x-slot>
-    <h2 class="text-lg font-semibold" style="text-align:center;">ようこそ！</h2>
-    <p style="text-align:center;">！日本地図の星をクリックすると天文台のHPに飛ぶことができます</p>
+    <h2 class="text-lg font-semibold" style="text-align:center;">ようこそおいでくださいました！</h2>
+    <h2 class="text-lg font-semibold" style="text-align:center;">HOME画面では口径が50cm以上の望遠鏡を持つ天文台が載ってます♪</h2>
+    <div class="kakomi-tape">
+	   <span class="title-tape">このページの使い方</span>
+	   <p>・星にカーソルを合わせてみて！天文台の情報が見れるよ！</p>
+	   <p>・星をクリックしてみて！天文台のHPに飛べるよ！</p>
+	</div>
         <div class="map">
             <img src="{{ asset('/css/image/Japan.PNG') }}" usemap="#Japan" alt="日本地図" class="map"/>
             <map name="Japan">
@@ -22,6 +27,8 @@
                 <p class="text-sm"><span class="font-medium" id="address"></span></p>
             </div>
 	    </div>
+	    
+
             
     　　<!--JavaScript-->
         <script>

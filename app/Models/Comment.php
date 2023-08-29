@@ -13,7 +13,7 @@ class Comment extends Model
     
     protected $fillable=['article','thread_id'];
     
-    public function tread(){
+    public function thread(){
         return $this->belongsTo(Thread::class);
     }
 }

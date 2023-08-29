@@ -17,13 +17,6 @@
                 @endif
             </div>
             
-            <a class="btn btn--radius" href="/observatories/{{ $observatory->id }}/edit">編集</a>
-            <form action="/threads/{{ $observatory->id }}" id="form_{{ $observatory->id }}" method="post">
-                @csrf
-                @method('DELETE')
-                <button class="btn btn--radius" type="button" onclick="deleteSNS({{ $observatory->id }})">削除</button>
-            </form>
-            
             <select name="input-select">
                 <option value="asc">古い順</option>
                 <option value="desc">新しい順</option>
@@ -60,36 +53,6 @@
             document.getElementById(`form_${id}`).submit();
         }
     }
-</script>
-<script>
-    window.addEventListener('DOMContentLoaded',function(){
-        var inputSelect = document.querySelector('[name="input-select"]');
-
-        inputSelect.addEventListener('change',function(){
-        const tableBody = document.querySelector('.table tbody');
-        const rows = Array.from(document.querySelectorAll('.item_child'));
-        console.log(rows);
-        
-        if (inputSelect.value === 'desc') {
-            rows.sort((a, b) => {
-                const dateA = new Date(a.querySelector('.item_child_content').textContent);
-                const dateB = new Date(b.querySelector('.item_child_content').textContent);
-                console.log('dateA',dateA);
-                return dateB - dateA; // 降順
-                
-            });    
-        } else {
-            rows.sort((a, b) => {
-                const dateA = new Date(a.querySelector('td').textContent);
-                const dateB = new Date(b.querySelector('td').textContent);
-                return dateA - dateB; // 昇順
-            });
-        }
-        rows.forEach(row => {
-            tableBody.appendChild(row);
-        });
-    });
-});    
 </script>
 <script type="text/javascript">var add = @json(count($threads))</script>
 <script type="text/javascript" src="{{ asset('/js/Threadindex.js') }}"></script>
