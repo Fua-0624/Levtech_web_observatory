@@ -7,9 +7,12 @@
     <div class="map"> 
         <img src="{{ asset( $region->region_image )}}" class="map"/>
     </div>
-    <p style="text-align:center;">！天文台名をクリックすると天文台のHPに飛ぶことができます</p>
-    <p style="text-align:center;">！住所をクリックすると天文台の場所を示したgooglemapに飛ぶことができます</p>
-    <p style="text-align:center;">！スレッドの「あり」をクリックするとスレッド一覧に飛ぶことができます</p>
+    <div class="kakomi-tape">
+        <span class="title-tape">このページの使い方</span>
+        <p style="text-align:center;">・<span class="font-semibold text-red-600 text-lg">天文台名</span>を<span class="font-semibold">クリック</span>すると<span class="font-semibold text-red-600">天文台のHP</span>に飛ぶことができます</p>
+        <p style="text-align:center;">・<span class="font-semibold text-green-600 text-lg">住所</span>を<span class="font-semibold">クリック</span>すると天文台の場所を示した<span class="font-semibold text-green-600">googlemap</span>に飛ぶことができます</p>
+        <p style="text-align:center;">・<span class="font-semibold text-blue-600 text-lg">スレッドの「あり」</span>を<span class="font-semibold">クリック</span>すると<span class="font-semibold text-blue-600">スレッド一覧</span>に飛ぶことができます</p>
+    </div>    
         <table class="table">
             <thead>
                 <tr>

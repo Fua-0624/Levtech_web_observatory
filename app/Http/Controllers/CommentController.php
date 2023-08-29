@@ -15,6 +15,6 @@ class CommentController extends Controller
     public function store(Request $request, Comment $comment){
         $input = $request['comment'];
         $comment->fill($input)->save();
-        return redirect('/');
+        return redirect('/threads/'.$comment->thread->id);
     }
 }

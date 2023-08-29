@@ -1,8 +1,8 @@
 const moreBtn = () => {
     const first = 10;
     const hidden = 'hidden';
-    const target = '.item';
-    const targets = document.querySelectorAll('.item');
+    const target = '.item_child';
+    const targets = document.querySelectorAll('.item_child');
     
     var addBtn = document.querySelector('#moreRead');  
   
@@ -17,9 +17,34 @@ const moreBtn = () => {
         else {
             addBtn.style.display = 'none';
         }
+        //投稿並び変え機能
+        var inputSelect = document.querySelector('[name="input-select"]');
+
+        inputSelect.addEventListener('change',function(){
+        const tableBody = document.querySelector('.table tbody');
+        const rows = Array.from(document.querySelectorAll('.item_child'));
+        
+        if (inputSelect.value === 'desc') {
+            rows.sort((a, b) => {
+                const dateA = new Date(a.querySelector('.item_child_content').textContent);
+                const dateB = new Date(b.querySelector('.item_child_content').textContent);
+                console.log('dateA',dateA);
+                return dateB - dateA; // 降順
+                
+            });    
+        } else {
+            rows.sort((a, b) => {
+                const dateA = new Date(a.querySelector('td').textContent);
+                const dateB = new Date(b.querySelector('td').textContent);
+                return dateA - dateB; // 昇順
+            });
+        }
+        rows.forEach(row => {
+            tableBody.appendChild(row);
+        });
+        });
+        //投稿なら控え機能のコードはここまで
     });
-    
-    
     
     addBtn.addEventListener('click', () => {
         let hiddens = document.querySelectorAll(target + "." + hidden);
@@ -33,17 +58,5 @@ const moreBtn = () => {
             addBtn.style.display = 'none';
         }
     });
-    
-    
 }
 moreBtn();
-
-/*let select = document.querySelector(`select[name='order-select']`);
-select.addEventListener(`change`, () => {
-    if ( select.options[1] == '新しい順'){
-        thread_date.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-    }
-    else{
-        thread_date.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
-    }
-});*/
