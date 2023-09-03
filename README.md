@@ -7,60 +7,30 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## 全国の天文台
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+　地図上での天文台の位置や、天文台の情報がわかるアプリです。天文台の情報としては、宿泊施設の有無、プラネタリウムの有無、住所が載っています。また、このアプリから各天文台のHPやGooglemapに飛ぶことができます。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **イメージマップ**機能：HOME画面では星をクリックすることで各天文台のHPに飛ぶことができます。
+- **ポップアップ**機能：HOME画面では星にカーソルを合わせると天文台の情報がポップアップで表示されます。
+- **スレッド投稿**機能：各天文台に対してスレッドを立てることができます。また、スレッドは編集、削除ができます。
+- **コメント投稿**機能：スレッドに対してコメントをすることができます。
+- **スレッド順変更**機能：スレッド一覧を投稿が新しい順か古い順の選択によって順番が変わります。
+- **もっと見る**機能：初期状態ではスレッドやコメントは10件のみしか表示されておらず、もっと見るボタンを押すことで表示件数を増やすことができます。
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## アピールポイント
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 天文台の位置がわかりやすい！
+　既存のサイトとして、全国の天文台を表で示したものはありました。しかし、文字だけではその天文台がどこにあるのかがイメージしづらいです。このアプリでは地図を使うことで視覚的に天文台の位置をわかりやすくしました。
+### 必要最低限の情報が載っている
+　宿泊施設の有無は夜遅くまで天文台に滞在できるのかの判断の手助けになります。また、プラネタリウムの有無は天気が悪くても星空を楽しめるかどうかの判断の手助けになります。
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 使用技術
+<table>
+    <tbody>
+        <tr><td>言語</td><td>PHP,HTML,CSS,JavaScript</td></tr> 
+        <tr><td>フレームワーク</td><td>Laravel</td></tr> 
+        <tr><td>その他</td><td>AWS,Breeze,TailWind</td></tr> 
+    </tbody>
+</table>
