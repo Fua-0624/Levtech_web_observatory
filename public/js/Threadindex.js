@@ -17,7 +17,7 @@ const moreBtn = () => {
         else {
             addBtn.style.display = 'none';
         }
-        //投稿並び変え機能
+        //スレッド順選択機能
         var inputSelect = document.querySelector('[name="input-select"]');
 
         inputSelect.addEventListener('change',function(){
@@ -43,7 +43,7 @@ const moreBtn = () => {
             tableBody.appendChild(row);
         });
         });
-        //投稿なら控え機能のコードはここまで
+        //スレッド順選択機能のコードはここまで
     });
     
     addBtn.addEventListener('click', () => {

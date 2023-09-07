@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Observatory;
 use App\Models\Thread;
+use App\Http\Requests\PostRequest;
 
 class ThreadController extends Controller
 {
