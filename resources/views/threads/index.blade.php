@@ -7,11 +7,13 @@
             <div class="SNS">
                 @if( $observatory->TwitterURL != NULL)
                     <a class="SNS_child" href="{{ $observatory->TwitterURL }}"><font color="bule">X(ツイッター)はこちら</font></a>
+                    <a class="SNS_child btn btn--radius" href="/observatories/{{ $observatory->id }}/x/edit">X(ツイッター)URL編集</a>
                 @else 
                     <p class="SNS_child">X(ツイッター)は未登録です</p>
                 @endif
                 @if( $observatory->InstagramURL != NULL)
                     <a class="SNS_child" href="{{ $observatory->InstagramURL }}"><font color="blue">インスタグラムはこちら</font></a>
+                    <a class="SNS_child btn btn--radius" href="/observatories/{{ $observatory->id }}/instagram/edit">インスタグラムURL編集</a>
                 @else
                     <p class="SNS_child">インスタグラムは未登録です</p>
                 @endif

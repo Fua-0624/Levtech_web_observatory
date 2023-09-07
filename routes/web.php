@@ -32,9 +32,10 @@ Route::controller(ObservatoryController::class)->group(function(){
     Route::get('/observatories/{observatory}/threads','index')->name('index');
     Route::get('/observatories/registerSNS','registerSNS')->name('registerSNS');
     Route::post('/observatories/SNS','store');
-    Route::put('/observatories/{observatory}','update');
-    Route::delete('/observatories/{obseravtory}','delete');
-    Route::get('/observatories/{observatory}/edit','edit');
+    Route::get('/observatories/{observatory}/x/edit','editx');
+    Route::put('/observatories/{observatory}/x/update','updatex');
+    Route::get('/observatories/{observatory}/instagram/edit','editinsta');
+    Route::put('/observatories/{observatory}/instagram/update','updateinsta');
 });
 
 Route::get('/regions/{region}',[RegionController::class,'region'])->name('region');

@@ -18,7 +18,7 @@
                 <button class="btn btn--radius" type="button" onclick="deleteThread({{ $thread->id }})">削除</button>
             </form>
         </div>
-        <a class="btn btn--radius" href="/observatories/{{ $thread->observatory->id }}/threads">スレッド一覧はこちら</a>
+        <a class="a_button" href="/observatories/{{ $thread->observatory->id }}/threads">スレッド一覧はこちら</a>
         
         
         <!--コメント内容表示-->
