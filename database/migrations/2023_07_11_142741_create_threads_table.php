@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('article');
+            $table->string('event');
+            $table->DATE('event_day')->nullable();
             $table->foreignId('observatory_id');
             $table->timestamps();
             $table->softDeletes();

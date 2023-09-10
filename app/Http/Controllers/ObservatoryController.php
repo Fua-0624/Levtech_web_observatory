@@ -9,8 +9,8 @@ use App\Models\Thread;
 
 class ObservatoryController extends Controller
 {
-    public function home(Observatory $observatory, Region $region ){
-        return view('observatories/home')->with(['observatories'=>$observatory->getByJapanMap(), 'regions' => $region->get()]);
+    public function home(Observatory $observatory, Region $region, Thread $thread){
+        return view('observatories/home')->with(['observatories'=>$observatory->getByJapanMap(), 'regions' => $region->get(), 'threads'=>$thread->getbyEvent()]);
     }
     
     public function index(Observatory $observatory){

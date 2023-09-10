@@ -28,6 +28,13 @@
             </div>
 	    </div>
 	    
+	    <div class="kokuban">
+            <span class="title-t2">イベント情報</span>
+            @foreach($threads as $thread)
+                <p><a href="/threads/{{ $thread->id }}">{{ $thread->event_day }}&nbsp;&nbsp;&nbsp;{{ $thread->title}}</a></p>
+            @endforeach
+        </div>
+	    
 
             
     　　<!--JavaScript-->

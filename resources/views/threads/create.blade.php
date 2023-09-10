@@ -22,7 +22,7 @@
                             @php
                                 $regionid = $observatory->region_id;
                             @endphp
-                            @endforeach
+                        @endforeach
                     </select>
                 </div>
             <div class="Form-Item">
@@ -33,6 +33,12 @@
                 <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>スレッド内容</p>
                 <textarea name="thread[article]" placeholder="追加情報などを書いてください"></textarea>
             </div>
+            <select name="thread[event]">
+                <option value="No">イベント登録しない</option>
+                <option value="Yes">イベント登録する</option>
+            </select>
+            <label class="date" for="date">イベントの日付：</label>
+            <input class="date" type="date" id="date" name="thread[event_day]" value="" />
             <input class="btn btn--radius" type="submit" value="送信">
             </form>
         </div>
@@ -40,3 +46,16 @@
             <a class="btn btn--radius" href="/">HOME画面に戻る</a>
         </div>
 </x-app-layout>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+    if([thread[event]].isSelected()){
+        date = document.querySelectorAll('.date');
+        console.log(date);
+        date.classList.remove('hidden')
+    }
+    else{
+        date = document.querySelectorAll('.date');
+        date.classList.add('hidden')
+    }
+    });
+</script>
