@@ -14,7 +14,7 @@ class Thread extends Model
     use SoftDeletes;
     use HasFactory;
     
-    protected $fillable=['observatory_id','title','article','event','event_day'];
+    protected $fillable=['observatory_id','user_id','title','article','event','event_day'];
     
     public function observatory(){
         return $this->belongsTo(Observatory::class);

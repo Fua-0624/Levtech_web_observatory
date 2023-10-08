@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('article');
             $table->foreignId('thread_id');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }

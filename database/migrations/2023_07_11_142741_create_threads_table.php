@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('event');
             $table->DATE('event_day')->nullable();
             $table->foreignId('observatory_id');
+            $table->foreignId('user_id');
             $table->timestamps();
             $table->softDeletes();
         });

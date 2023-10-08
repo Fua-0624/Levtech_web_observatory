@@ -42,8 +42,8 @@
             <input class="btn btn--radius" type="submit" value="送信">
             </form>
         </div>
-        <div class="footer">
-            <a class="btn btn--radius" href="/">HOME画面に戻る</a>
+        <div class="btn btn--radius">
+            <a href="/">HOME画面に戻る</a>
         </div>
 </x-app-layout>
 <script>

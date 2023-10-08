@@ -11,7 +11,7 @@ class Comment extends Model
 {
     use HasFactory;
     
-    protected $fillable=['article','thread_id'];
+    protected $fillable=['article','thread_id','user_id'];
     
     public function thread(){
         return $this->belongsTo(Thread::class);

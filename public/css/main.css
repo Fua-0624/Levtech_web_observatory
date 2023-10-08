@@ -87,7 +87,7 @@ input.btn:hover{
   padding:2px 10px 2px 10px;
 }
 
-a.btn--radius,
+.btn--radius,
 button.btn--radius,
 input.btn--radius{
    border-radius: 100vh;
