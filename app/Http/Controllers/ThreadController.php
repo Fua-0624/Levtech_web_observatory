@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Observatory;
 use App\Models\Thread;
 use App\Http\Requests\PostRequest;
@@ -19,6 +20,7 @@ class ThreadController extends Controller
     
     public function store(Request $request, Thread $thread){
         $input = $request['thread'];
+        $input['user_id'] = Auth::id();
         $thread->fill($input)->save();
         return redirect('/observatories/'.$thread->observatory->id.'/threads');
     }

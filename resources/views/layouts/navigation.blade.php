@@ -97,6 +97,10 @@
                     </x-slot>
                 </x-dropdown>
             </div>
+            @else
+            <x-nav-link :href="route('register')" :active="request()->routeIs('register')">
+                        {{ __('新規アカウント登録')}}
+            </x-nav-link>
             @endauth
 
             <!-- Hamburger -->

@@ -39,6 +39,7 @@
             
     　　<!--JavaScript-->
         <script>
+            //ポップアップ機能
             $('img[usemap]').rwdImageMaps();
             function showTooltip(area) {
                 const data = @json($observatories);

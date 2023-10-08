@@ -10,15 +10,26 @@
         </x-slot>
         <!--スレッド内容表示-->
         <div class="kokuban">
-            <span class="title-t2">スレッド</span>
-            <p><span class="text-sm">{{ $thread->updated_at}}</span>&nbsp;&nbsp;&nbsp;{{ $thread->article }}&nbsp;&nbsp;&nbsp;<a class="btn btn--radius" href="/threads/{{ $thread->id}}/edit">編集</a></p>
-            <form action="/threads/{{ $thread->id }}" id="form_{{ $thread->id }}" method="post">
-                @csrf
-                @method('DELETE')
-                <button class="btn btn--radius" type="button" onclick="deleteThread({{ $thread->id }})">削除</button>
-            </form>
+            @auth
+                <span class="title-t2">{{ $thread->observatory->observatory}}</span>
+                <p><span class="text-sm">{{ $thread->updated_at}}</span>&nbsp;&nbsp;&nbsp;{{ $thread->article }}</p>
+                @if(Auth::user()->id == $thread->user_id)
+                    <a class="btn btn--radius" href="/threads/{{ $thread->id}}/edit">編集</a>
+                    <form action="/threads/{{ $thread->id }}" id="form_{{ $thread->id }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn--radius" type="button" onclick="deleteThread({{ $thread->id }})">削除</button>
+                    </form>
+                @endif
+            @else
+            <span class="title-t2">{{ $thread->observatory->observatory}}</span>
+            <p><span class="text-sm">{{ $thread->updated_at}}</span>&nbsp;&nbsp;&nbsp;{{ $thread->article }}</p>
+            @endauth
         </div>
-        <a class="a_button" href="/observatories/{{ $thread->observatory->id }}/threads">スレッド一覧はこちら</a>
+        <div class="a_button">
+            <a href="/observatories/{{ $thread->observatory->id }}/threads">スレッド一覧はこちら</a>
+        </div>
+        
         
         
         <!--コメント内容表示-->
