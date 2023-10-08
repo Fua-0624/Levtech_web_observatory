@@ -40,3 +40,11 @@
         <tr><td>その他</td><td>AWS,Breeze,TailWind</td></tr> 
     </tbody>
 </table>
+
+## ER図
+- observatoriesテーブル：各天文台の情報が入ったテーブル
+- regionsテーブル：日本の地方の情報が入ったテーブル
+- threadsテーブル：ユーザーが入力したスレッドの情報が入ったテーブル
+- commentsテーブル：各スレッドに対して行ったコメントの情報が入ったテーブル
+- usersテーブル：ログインしたユーザーの情報が入ったテーブル
+<p align="center"><img src="https://github.com/Fua-0624/Levtech_web_observatory/assets/134463043/e88037f9-5a36-43fb-89aa-2d5fb0d23e9b" alt="ER図"><p>
