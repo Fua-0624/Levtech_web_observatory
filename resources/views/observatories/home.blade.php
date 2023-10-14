@@ -1,3 +1,7 @@
+<head>
+    <link href="{{ asset('/css/home.css') }}" rel="stylesheet">
+</head>
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -20,18 +24,22 @@
             </map>
             <div class="tooltip" id="tooltip">
                 <p id="title" class="text-lg font-semibold"></p>
-                <p class="text-sm">宿泊施設:<span class="font-medium" id="hotel"></span></p>
-                <p class="text-sm">プラネタリウム:<span class="font-medium" id="planetarium"></span></p>
-                <p class="text-sm">住所:</p>
-                <p class="text-sm">〒<span class="font-medium" id="address_number"></span></p>
-                <p class="text-sm"><span class="font-medium" id="address"></span></p>
+                <table class="pop_up">
+                    <tr><td>宿泊施設</td><td><span class="font-medium" id="hotel"></span></td></tr>
+                    <tr><td>プラネタリウム</td><td><span class="font-medium" id="planetarium"></span></td></tr>
+                    <tr><td>住所</td><td>〒<span class="font-medium" id="address_number"></span></td></tr>
+                    <tr><td></td><td><span class="font-medium" id="address"></span></td></tr>
+                </table>
             </div>
 	    </div>
 	    
 	    <div class="kokuban">
             <span class="title-t2">イベント情報</span>
             @foreach($threads as $thread)
-                <p><a href="/threads/{{ $thread->id }}">{{ $thread->event_day }}&nbsp;&nbsp;&nbsp;{{ $thread->title}}</a></p>
+                <p>
+                    <span class="font-semibold">{{ $thread->observatory->observatory }}</span>&nbsp;&nbsp;&nbsp;
+                    <a href="/threads/{{ $thread->id }}">{{ $thread->event_day }}&nbsp;&nbsp;&nbsp;{{ $thread->title}}</a>
+                </p>
             @endforeach
         </div>
 	    

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Observatory;
 use App\Models\Thread;
-use App\Http\Requests\PostRequest;
+use App\Http\Requests\ThreadRequest;
 
 class ThreadController extends Controller
 {
@@ -18,7 +18,11 @@ class ThreadController extends Controller
         return view('threads/detail')->with(['thread'=>$thread, 'comments'=>$thread->comments()->get()]);
     }
     
-    public function store(Request $request, Thread $thread){
+    public function table(Thread $thread){
+        return view('threads/list')->with(['threads'=>$thread->get()]);
+    }
+    
+    public function store(ThreadRequest $request, Thread $thread){
         $input = $request['thread'];
         $input['user_id'] = Auth::id();
         $thread->fill($input)->save();
@@ -29,7 +33,7 @@ class ThreadController extends Controller
         return view('threads/edit')->with(['thread'=>$thread]);
     }
     
-    public function update(Request $request, Thread $thread){
+    public function update(ThreadRequest $request, Thread $thread){
         $input_thread = $request['thread'];
         $thread->fill($input_thread)->save();
         return redirect('/observatories/'.$thread->observatory->id.'/threads');

@@ -5,7 +5,7 @@
             </h2>
     </x-slot>
         <div style="width:50%; margin: 0 auto; text-align:center;">
-            <form action="/observatories/threads" , method="POST">
+            <form action="/observatories/threads/store" , method="POST">
             @csrf
             <div class="Form">
                 <div class="Form-Item">
@@ -24,14 +24,17 @@
                             @endphp
                         @endforeach
                     </select>
+                    <p class="observatory_error" style="color:red">{{ $errors->first('thread.observatory_id') }}</p>
                 </div>
             <div class="Form-Item">
                 <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>スレッドタイトル</p>
-                <input type="text" name="thread[title]" placeholder="タイトル">
+                <input type="text" name="thread[title]" placeholder="タイトル" value="{{ old('thread.title') }}">
+                <p class="title_error" style="color:red">{{ $errors->first('thread.title') }}</p>
             </div>
             <div class="Form-Item">
                 <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>スレッド内容</p>
-                <textarea name="thread[article]" placeholder="追加情報などを書いてください"></textarea>
+                <textarea name="thread[article]" placeholder="追加情報などを書いてください">{{ old('thread.article')}}</textarea>
+                <p class="article_error" style="color:red">{{ $errors->first('thread.article') }}</p>
             </div>
             <select name="thread[event]">
                 <option value="No">イベント登録しない</option>

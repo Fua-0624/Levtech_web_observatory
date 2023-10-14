@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-size:30px;
 }
 img {
   width: 100%;
@@ -34,6 +35,11 @@ input{
   margin: 4px;
 }
 
+.order{
+  text-align: center;
+  padding : 5px;
+}
+
 /* 吹き出しのスタイル */
 .tooltip {
   position: absolute;
@@ -48,7 +54,7 @@ input{
         
 /*表のスタイル*/
 table{
-  width: 50%;
+  width: 60%;
   border-collapse: collapse;
   border-spacing: 0;
   margin:auto;
@@ -102,7 +108,7 @@ input.btn--radius{
  position:relative;
  padding: 35px 20px 15px;
  margin: 2.5em auto;
- width: 50%;
+ width: 60%;
  color: #555555; /* 文字色 */
  background-color: #e8ddbd;
  box-shadow: inset 0 0 40px rgba(204, 186, 136,1), 0 2px 2px #ccc;
@@ -128,7 +134,7 @@ input.btn--radius{
  position: relative;
  margin: 2em auto;
  padding: 3.2em 1em 1em;
- width: 50%; /* ボックス幅 */
+ width: 60%; /* ボックス幅 */
  background-color: #006633; /* ボックス背景色 */
  color: #fff; /* 文章色 */
  border: 8px solid #b2771f; /* 枠線 */
@@ -361,6 +367,9 @@ input{
 
 /*スマホ用のCSS*/
 @media screen and (max-width: 480px){
+  body{
+    font-size:10px;
+  }
   table{
     width: 100%;
     border-collapse: collapse;

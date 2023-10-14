@@ -28,7 +28,12 @@ Route::controller(ObservatoryController::class)->group(function(){
     Route::get('/observatories/{observatory}/threads','index')->name('index');
 });
 Route::get('/regions/{region}',[RegionController::class,'region'])->name('region');
-Route::get('/threads/{thread}',[ThreadController::class,'detail']);
+Route::controller(ThreadController::class)->group(function(){
+    Route::get('/threads/{thread}','detail');
+    Route::get('/observatories/threads/list','table')->name('thread_list');
+});
+
+
 
 //ログイン必要な画面
 Route::group(['middleware' => ['auth']], function(){
@@ -38,7 +43,7 @@ Route::group(['middleware' => ['auth']], function(){
         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
         Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
-    //SNSの登録・編集
+    //SNSの登録・編集(現在機能停止中)
     Route::controller(ObservatoryController::class)->group(function(){
         Route::get('/observatories/registerSNS','registerSNS')->name('registerSNS'); 
         Route::post('/observatories/SNS','store');
@@ -50,7 +55,7 @@ Route::group(['middleware' => ['auth']], function(){
     //スレッドの作成・編集・削除
     Route::controller(ThreadController::class)->group(function(){
         Route::get('/threads','create')->name('create');
-        Route::post('/observatories/threads','store');
+        Route::post('/observatories/threads/store','store');
         Route::put('/threads/{thread}','update');
         Route::delete('/threads/{thread}','delete');
         Route::get('/threads/{thread}/edit','edit');

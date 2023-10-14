@@ -11,6 +11,7 @@
                 <div class="body">
                     <h2>スレッド内容</h2>
                     <input type='text' name="thread[article]" value="{{ $thread->article }}">
+                    <p class="article_error" style="color:red">{{ $errors->first('thread.article') }}</p>
                 </div>
                 <input class="btn btn--radius" type="submit" value="変更を保存">
              </form>
