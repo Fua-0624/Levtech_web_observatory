@@ -21,7 +21,7 @@ const moreBtn = () => {
         var inputSelect = document.querySelector('[name="input-select"]');
 
         inputSelect.addEventListener('change',function(){
-        const tableBody = document.querySelector('.table tbody');
+        const tableBody = document.querySelector('.kakomi');
         const rows = Array.from(document.querySelectorAll('.item_child'));
         
         if (inputSelect.value === 'desc') {
@@ -34,8 +34,8 @@ const moreBtn = () => {
             });    
         } else {
             rows.sort((a, b) => {
-                const dateA = new Date(a.querySelector('td').textContent);
-                const dateB = new Date(b.querySelector('td').textContent);
+                const dateA = new Date(a.querySelector('.td').textContent);
+                const dateB = new Date(b.querySelector('.td').textContent);
                 return dateA - dateB; // 昇順
             });
         }

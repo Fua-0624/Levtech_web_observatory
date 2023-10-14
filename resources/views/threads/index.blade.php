@@ -23,23 +23,17 @@
                 <option value="asc">古い順</option>
                 <option value="desc">新しい順</option>
             </select>
-            <table class="table">
-                <thead>
-                    <tr>
-                    <th>作成日</th>
-                    <th>タイトル</th>
-                    </tr>
-                </thead>
-                <tbody class="item">
+            <div class="kakomi">
+                <span class="title">スレッド</span>
+                <div class="item">
                     @foreach($threads as $thread)
-                    <tr class="item_child">
-                        <td class="item_child_content">{{ $thread->updated_at }}</td>
-                        <td><a href="/threads/{{ $thread->id }}"><font color="blue">{{ $thread->title }}</font></a></td>
-                    </tr>
+                    <div class="item_child">
+                        <p class="item_child_content td">作成日:{{ $thread->updated_at }}</p>
+                        <a href="/threads/{{ $thread->id }}" class="td text-lg"><font color="blue">{{ $thread->title }}</font></a>
+                        </br>
+                    </div>
                     @endforeach
-                </tbody>
-            </table>
-            <div class="more-read-button">
+                </div>
                 <button id="moreRead" class="more-read btn btn--radius">もっと見る</button>
             </div>
 
