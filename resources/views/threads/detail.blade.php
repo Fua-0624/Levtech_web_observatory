@@ -22,12 +22,12 @@
                     </form>
                 @endif
             @else
-            <span class="title-t2">{{ $thread->observatory->observatory}}</span>
-            <p>{{ $thread->updated_at}}&nbsp;&nbsp;&nbsp;<span class="text-lg">{{ $thread->article }}</span></p>
+            <h2><span class="title-t2">{{ $thread->observatory->observatory }}</span>{{ $thread->updated_at }}</h2>
+            <p><span class="text-lg">{{ $thread->article }}</span></p>
             @endauth
         </div>
         <div class="a_button">
-            <a href="/observatories/{{ $thread->observatory->id }}/threads">スレッド一覧はこちら</a>
+            <a href="/observatories/{{ $thread->observatory->id }}/threads">{{ $thread->observatory->observatory }}のスレッド一覧はこちら</a>
         </div>
         
         

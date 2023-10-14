@@ -1,10 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ $observatory->observatory }}のスレッド一覧
+                ★{{ $observatory->observatory }}★のスレッド一覧
             </h2>
         </x-slot>
-            <div class="SNS">
+            <!--<div class="SNS">
                 @if( $observatory->TwitterURL != NULL)
                     <a class="SNS_child" href="{{ $observatory->TwitterURL }}"><font color="bule">X(ツイッター)はこちら</font></a>
                     <a class="SNS_child btn btn--radius" href="/observatories/{{ $observatory->id }}/x/edit">X(ツイッター)URL編集</a>
@@ -17,12 +17,14 @@
                 @else
                     <p class="SNS_child">インスタグラムは未登録です</p>
                 @endif
+            </div>-->
+            <div class="order">
+                <select name="input-select">
+                    <option value="asc">古い順</option>
+                    <option value="desc">新しい順</option>
+                </select>
             </div>
             
-            <select name="input-select">
-                <option value="asc">古い順</option>
-                <option value="desc">新しい順</option>
-            </select>
             <div class="kakomi">
                 <span class="title">スレッド</span>
                 <div class="item">

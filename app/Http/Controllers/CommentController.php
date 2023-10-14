@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Thread;
 use App\Models\Comment;
-use App\Http\Requests\PostRequest;
+use App\Http\Requests\CommentRequest;
 
 class CommentController extends Controller
 {
@@ -14,7 +14,7 @@ class CommentController extends Controller
         return view('comments/create')->with(['thread'=> $thread]);
     }
     
-    public function store(Request $request, Comment $comment){
+    public function store(CommentRequest $request, Comment $comment){
         $input = $request['comment'];
         $input['user_id'] = Auth::id();
         $comment->fill($input)->save();

@@ -11,7 +11,8 @@
                     <div class="Form-Item">
                         <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>コメント内容</p>
                         <input type="hidden" name="comment[thread_id]" value="{{ $thread->id }}">
-                        <textarea name="comment[article]" placeholder="コメントを書いてください"></textarea>
+                        <textarea name="comment[article]" placeholder="コメントを書いてください">{{ old('comment.article') }}</textarea>
+                        <p class="article_error" style="color:red">{{ $errors->first('comment.article') }}</p>
                     </div>
                 </div>    
                 <input class="btn btn--radius" type="submit" value="送信">

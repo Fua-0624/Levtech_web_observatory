@@ -55,11 +55,11 @@
                         </x-slot>
                     </x-dropdown>
                     
+                    <x-nav-link :href="route('thread_list')" :active="request()->routeIs('thread_list')">
+                        {{ __('スレッド一覧')}}
+                    </x-nav-link>
                     <x-nav-link :href="route('create')" :active="request()->routeIs('create')">
                         {{ __('スレッド作成') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('registerSNS')" :active="request()->routeIs('registerSNS')">
-                        {{ __('SNS登録')}}
                     </x-nav-link>
                 </div>
             </div>
