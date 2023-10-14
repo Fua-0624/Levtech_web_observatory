@@ -12,7 +12,7 @@
         <div class="kokuban">
             @auth
                 <span class="title-t2">{{ $thread->observatory->observatory}}</span>
-                <p><span class="text-sm">{{ $thread->updated_at}}</span>&nbsp;&nbsp;&nbsp;{{ $thread->article }}</p>
+                <p>{{ $thread->updated_at}}&nbsp;&nbsp;&nbsp;<span class="text-lg">{{ $thread->article }}</span></p>
                 @if(Auth::user()->id == $thread->user_id)
                     <a class="btn btn--radius" href="/threads/{{ $thread->id}}/edit">編集</a>
                     <form action="/threads/{{ $thread->id }}" id="form_{{ $thread->id }}" method="post">
@@ -23,7 +23,7 @@
                 @endif
             @else
             <span class="title-t2">{{ $thread->observatory->observatory}}</span>
-            <p><span class="text-sm">{{ $thread->updated_at}}</span>&nbsp;&nbsp;&nbsp;{{ $thread->article }}</p>
+            <p>{{ $thread->updated_at}}&nbsp;&nbsp;&nbsp;<span class="text-lg">{{ $thread->article }}</span></p>
             @endauth
         </div>
         <div class="a_button">
@@ -36,8 +36,8 @@
         <div class="kakomi">
             <span class="title">コメント</span>
                 @foreach($comments as $comment)
-                    <p class="text-xs">作成日:{{ $comment->updated_at }}</p>
-                    <h2>{{ $comment->article }}</h2>
+                    <p>作成日:{{ $comment->updated_at }}</p>
+                    <h2 class="text-lg">{{ $comment->article }}</h2>
                     </br>
                 @endforeach
                 <button id="moreRead" class="more-read btn btn--radius">もっと見る</button>
