@@ -15,7 +15,7 @@
      <tbody>
          <tr>
              <td>アカウント名</td><td>tester</td>
-             <td>メールアドレス</td><td>test@example.com</td>
+             <td>メールアドレス</td><td>test3@example.com</td>
              <td>パスワード</td><td>testpass</td>
          </tr>
      </tbody>
