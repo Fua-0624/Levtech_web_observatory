@@ -14,7 +14,8 @@
         <p style="text-align:center;">・<span class="font-semibold text-blue-600 text-lg">スレッドの「あり」</span>を<span class="font-semibold">クリック</span>すると<span class="font-semibold text-blue-600">スレッド一覧</span>に飛ぶことができます</p>
         <p style="text-align:center;">・赤丸は望遠鏡のサイズが50cm~100cm、青丸は望遠鏡のサイズが100cm~200cm、紫丸は望遠鏡のサイズが200cm以上です</p>
     </div>
-        <table class="table">
+    <div class="table">
+        <table>
             <thead>
                 <tr>
                 <th>番号</th>
@@ -45,4 +46,5 @@
                 @endforeach
             </tbody>
         </table>
+    </div>    
 </x-app-layout>

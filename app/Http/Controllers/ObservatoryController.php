@@ -17,6 +17,11 @@ class ObservatoryController extends Controller
         return view('threads/index')->with(['observatory'=>$observatory, 'threads'=>$observatory->threads()->get()]);
     }
     
+    public function sitemap(Region $region){
+        return view('observatories/sitemap')->with(['regions'=>$region->get()]);
+    }
+    
+    //SNS編集に関する処理
     public function registerSNS(Observatory $observatory){
         return view('observatories/registerSNS')->with(['observatories'=>$observatory->get()]);
     }
