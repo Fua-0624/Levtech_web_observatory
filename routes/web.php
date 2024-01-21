@@ -18,14 +18,11 @@ use App\Http\Controllers\CommentController;
 |
 */
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 //ログイン不要な画面
 Route::controller(ObservatoryController::class)->group(function(){
     Route::get('/','home')->name('home');
     Route::get('/observatories/{observatory}/threads','index')->name('index');
+    Route::get('/sitemap','sitemap')->name('sitemap');
 });
 Route::get('/regions/{region}',[RegionController::class,'region'])->name('region');
 Route::controller(ThreadController::class)->group(function(){
