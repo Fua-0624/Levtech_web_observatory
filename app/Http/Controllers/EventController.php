@@ -26,9 +26,10 @@ class EventController extends Controller
         $event->end_date = date("Y-m-d", strtotime("{$request->input('end_date')} + 1 day"));
         $event->event_color = $request->input('event_color');
         $event->event_border_color = $request->input('event_color');
+        $event->observatory_id = $request->input('observatory_id');
         $event->save();
         
-        return redirect(route("show"));
+        return redirect(route("home"));
     }
     
     //予定の表示
@@ -48,7 +49,8 @@ class EventController extends Controller
                 'start_date as start',
                 'end_date as end',
                 'event_color as backgroundColor',
-                'event_border_color as borderColor'
+                'event_border_color as borderColor',
+                'observatory_id as input_observaoty'
             )
             ->where('end_date', '>' , $start_date)
             ->where('start_date' , '<' , $end_date)
@@ -65,14 +67,15 @@ class EventController extends Controller
         $input->end_date = date("Y-m-d", strtotime("{$request->input('end_date')} + 1 day"));
         $input->event_color = $request->input('event_color');
         $input->event_border_color = $request->input('event_color');
+        $input->observaory_id = $request->input('observatory_id');
         
         $event->find($request->input('id'))->fill($input->attributesToArray())->save();
-        return redirect(route("show"));
+        return redirect(route("home"));
     }
     
     //予定の削除
     public function delete(Request $request, Event $event){
         $event->find($request->input('id'))->delete();
-        return redirect(route("show"));
+        return redirect(route("home"));
     }
 }

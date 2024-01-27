@@ -4,10 +4,11 @@
                 {{ __('スレッド作成') }}
             </h2>
     </x-slot>
-        <div style="width:50%; margin: 0 auto; text-align:center;">
+        <div style="width:90%; margin: 0 auto; text-align:center;">
             <form action="/observatories/threads/store" , method="POST">
             @csrf
             <div class="Form">
+                <!--スレッド作成-->
                 <div class="Form-Item">
                     <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>天文台</p>
                     <select name="thread[observatory_id]">
@@ -26,26 +27,40 @@
                     </select>
                     <p class="observatory_error" style="color:red">{{ $errors->first('thread.observatory_id') }}</p>
                 </div>
-            <div class="Form-Item">
-                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>スレッドタイトル</p>
-                <input type="text" name="thread[title]" placeholder="タイトル" value="{{ old('thread.title') }}">
-                <p class="title_error" style="color:red">{{ $errors->first('thread.title') }}</p>
-            </div>
-            <div class="Form-Item">
-                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>スレッド内容</p>
-                <textarea name="thread[article]" placeholder="追加情報などを書いてください">{{ old('thread.article')}}</textarea>
-                <p class="article_error" style="color:red">{{ $errors->first('thread.article') }}</p>
-            </div>
-            <select name="thread[event]">
-                <option value="No">イベント登録しない</option>
-                <option value="Yes">イベント登録する</option>
-            </select>
-            <label class="date" for="date">イベントの日付：</label>
-            <input class="date" type="date" id="date" name="thread[event_day]" value="" />
-            <input class="btn btn--radius" type="submit" value="送信">
+                <div class="Form-Item">
+                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>スレッドタイトル</p>
+                    <input type="text" name="thread[title]" placeholder="タイトル" value="{{ old('thread.title') }}">
+                    <p class="title_error" style="color:red">{{ $errors->first('thread.title') }}</p>
+                </div>
+                <div class="Form-Item">
+                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>スレッド内容</p>
+                    <textarea name="thread[article]" placeholder="追加情報などを書いてください">{{ old('thread.article')}}</textarea>
+                    <p class="article_error" style="color:red">{{ $errors->first('thread.article') }}</p>
+                </div>
+                <!--イベント登録-->
+                <div class="Form-Item">
+                    <select name="thread[event]">
+                        <option value="No">イベント登録しない</option>
+                        <option value="Yes">イベント登録する</option>
+                    </select>
+                </div>
+                <div class="Form-Item">
+                    <label for="start_date">開始日時</label>
+                    <input class="input-date" type="date" id="start_date" name="start_date" value="" />
+                    <label for="end_date">終了日時</label>
+                    <input class="input-date" type="date" id="end_date" name="end_date" value="" />
+                </div>
+                <div class="Form-Item">
+                    <label for="event_color">カレンダーに表示する背景色</label>
+                    <select id="event_color" name="event_color">
+                        <option value="blue">青</option>
+                        <option value="green">緑</option>
+                    </select>
+                </div>
+                <input class="btn btn--radius" type="submit" value="送信">
             </form>
-        </div>
-        <div class="btn btn--radius">
+            </div>
+        <div>
             <a href="/">HOME画面に戻る</a>
         </div>
 </x-app-layout>

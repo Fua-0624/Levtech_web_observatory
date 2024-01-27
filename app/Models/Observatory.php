@@ -20,6 +20,10 @@ class Observatory extends Model
         return $this->hasMany(Thread::class);
     }
     
+    public function events(){
+        return $this->hasMany(Event::class);
+    }
+    
     public function getByJapanMap(){
         return $this::where('JapanMap','○')->get();
     }
