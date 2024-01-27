@@ -17,4 +17,8 @@ class Event extends Model
       'event_color',
       'event_border_color',
     ];
+    
+    public function observatory(){
+      return $this->belongsTo(Observatory::class,'observatory_id');
+    }
 }

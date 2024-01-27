@@ -4,6 +4,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 
+//取得された日付を文字列に変換する
 function formatDate(date, pos){
     var dt = new Date(date);
     if(pos==="end"){
@@ -46,6 +47,7 @@ if(calendarEl !== null ){
             end: "eventAddButton dayGridMonth,timeGridWeek",
         },
         height: "auto",
+        aspecRation:0.5,
         
         //日程指定で新規予定追加
         selectable:true,
@@ -57,6 +59,7 @@ if(calendarEl !== null ){
             document.getElementById("new-end_date").value = formatDate(info.end, "end"); // 選択した終了日を反映
             document.getElementById("new-event_body").value = "";
             document.getElementById("new-event_color").value = "blue";
+            document.getElementById("input_observatory").value = 1;
             // 新規予定追加モーダルを開く
             document.getElementById('modal-add').style.display = 'flex';
         },

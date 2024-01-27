@@ -30,14 +30,6 @@ Route::controller(ThreadController::class)->group(function(){
     Route::get('/threads/{thread}','detail');
     Route::get('/observatories/threads/list','table')->name('thread_list');
 });
-//FullCalender関連のルート
-Route::controller(EventController::class)->group(function(){
-    Route::get('/calendar' , 'show')->name("show");
-    Route::post('/calendar/create', 'create')->name("event.create");
-    Route::post('/calendar/get','get')->name('get');
-    Route::put('/calendar/update', 'update')->name("update");
-    Route::delete('/calendar/delete', 'delete')->name("delete");
-});
 
 //ログイン必要な画面
 Route::group(['middleware' => ['auth']], function(){
@@ -68,6 +60,13 @@ Route::group(['middleware' => ['auth']], function(){
     Route::controller(CommentController::class)->group(function(){
         Route::post('/threads/comments','store');
         Route::get('/threads/{thread}/comments/create','create');
+    });
+    //FullCalender関連のルート
+    Route::controller(EventController::class)->group(function(){
+        Route::post('/calendar/create', 'create')->name("event.create");
+        Route::post('/calendar/get','get')->name('get');
+        Route::put('/calendar/update', 'update')->name("update");
+        Route::delete('/calendar/delete', 'delete')->name("delete");
     });
 });
 
