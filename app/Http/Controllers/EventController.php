@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Event;
+use App\Models\Thread;
 
 class EventController extends Controller
 {
@@ -11,7 +13,8 @@ class EventController extends Controller
         return view("calendars.calendar");
     }
     
-    public function create(Request $request, Event $event){
+    //予定の新規作成(/calender/createにpostリクエストが来たときに実行される)
+    public function create(Request $request, Event $event, Thread $thread){
         //バリデーションの設定
         $request->validate([
             'event_title' => 'required',
@@ -20,6 +23,7 @@ class EventController extends Controller
             'event_color' => 'required',
         ]);
         
+        //イベント登録処理
         $event->event_title = $request->input('event_title');
         $event->event_body = $request->input('event_body');
         $event->start_date = $request->input('start_date');
@@ -29,10 +33,18 @@ class EventController extends Controller
         $event->observatory_id = $request->input('observatory_id');
         $event->save();
         
+        //スレッド登録処理
+        $thread->observatory_id = $request->input('observatory_id');
+        $thread->title = $request->input('event_title');
+        $thread->article = $request->input('event_body');
+        $thread->event = "Yes";
+        $thread->user_id = Auth::id();
+        $thread->save();
+        
         return redirect(route("home"));
     }
     
-    //予定の表示
+    //予定の表示(/calender/getにp)
     public function get(Request $request, Event $event){
         $request->validate([
             'start_date' => 'required|integer',
