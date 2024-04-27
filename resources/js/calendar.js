@@ -16,14 +16,14 @@ function formatDate(date, pos){
 //calendarのidを持つ要素をcalendarElに入れる
 var calendarEl = document.getElementById("calendar");
 
-//以下の処理がcalendarElがnullじゃないと動かないようif文を使う
+//以下の処理がcalendarElがnull以外で動くようにする
 if(calendarEl !== null ){
     let calendar = new Calendar(calendarEl,{
         plugins: [interactionPlugin, dayGridPlugin, timeGridPlugin],
         initialView: "dayGridMonth",  //カレンダーが開かれたとき、最初は月ごとの表示にしておく
+        
         //予定を追加するボタンの設置と、クリックした時の処理
-        //新しいボタンを設定したかったらcustomButtonsで設定する(FullCalendarに備わっている機能)
-        customButtons: { // カスタムボタン
+        customButtons: { // カスタムボタン：新しいボタンを設定したかったらcustomButtonsで設定する(FullCalendarに備わっている機能)
             eventAddButton: { // 新規予定追加ボタン
                 text: '予定を追加',
                 click: function() {
@@ -75,7 +75,7 @@ if(calendarEl !== null ){
                 })
                 .then((response) => {
                     // 既に表示されているイベントを削除（重複防止）
-                    calendar.removeAllEvents(); // ver.6でもどうやら使える（ドキュメントにはない？）
+                    calendar.removeAllEvents();
                     // カレンダーに読み込み
                     successCallback(response.data); // successCallbackに予定をオブジェクト型で入れるとカレンダーに表示できる
                 })
@@ -106,10 +106,12 @@ if(calendarEl !== null ){
         document.getElementById('modal-add').style.display= 'none';
     }
     
+    //予定編集のモーダル画面で「キャンセル」が押されたときにモーダルを閉じる関数
     window.closeUpdateModal = function(){
         document.getElementById('modal-update').style.display = 'none';
     }
     
+    //予定の削除ボタンが押されたときに予定を削除する関数
     window.deleteEvent = function(){
         'use strict'
         

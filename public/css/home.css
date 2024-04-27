@@ -17,3 +17,14 @@ table td{
 table tr:nth-child(odd){
   background-color: #EEFFFF
 }
+
+#calendar{
+    width:70%;
+    margin: 0 auto;
+}
+
+.headline{
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+}
